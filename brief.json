@@ -1,0 +1,319 @@
+{
+  "run_id": "run-1779420140546",
+  "job_index": 5,
+  "params": {
+    "owner_user_id": "user-1774822953462",
+    "owner_username": "admin",
+    "owner_display_name": "Administrator",
+    "count": 5,
+    "archetype": "tool",
+    "market": "France",
+    "language": "fr",
+    "country": "FR",
+    "brief": "Explorez la nature en toute conscience. Planifiez vos randonnées en minimisant votre impact environnemental.",
+    "notes": "Organisez vos itinéraires de randonnée en privilégiant les sentiers balisés, les zones protégées et les pratiques respectueuses de l'environnement. Découvrez la France durablement.\nIntegration with mapping services, park regulations, and eco-tourism guidelines. Suggestion of waste reduction tips and responsible visitor behavior.",
+    "import_notes": "",
+    "growth_job_id": "",
+    "growth_slug": "",
+    "growth_kind": "",
+    "external_site_request_id": "",
+    "external_client_ref": "",
+    "external_source_label": "",
+    "dashboard_mode": "builder",
+    "network_site_format": "forum",
+    "network_primary_topic": "",
+    "network_primary_geo": "",
+    "network_domain_pool": "forum-de-jeu.shop",
+    "network_hosting_pool": "4vps:netoper | server_id=447345 | ip=5.253.59.18 | ssh_user=root | ssh_port=22",
+    "network_dns_strategy": "auto_pool_assign",
+    "network_domain_flow": "manual",
+    "network_content_strategy": "",
+    "network_model_concept": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_seo": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_build": "google/gemini-2.5-flash",
+    "network_model_qa": "anthropic/claude-haiku-4.5",
+    "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
+    "network_blueprint_id": "",
+    "mode": "production",
+    "run_kind": "generated_batch",
+    "publish_target": "render",
+    "requested_publish_target": "render",
+    "provider_space_id": "provider-space",
+    "provider_space_name": "Provider space",
+    "allow_url_fallback": false,
+    "railway_project_id_override": "",
+    "railway_environment_id_override": "",
+    "railway_service_id_override": "",
+    "railway_service_name_override": "",
+    "github_repo_private": true,
+    "stage_models": {
+      "ideation": "google/gemini-2.5-flash-lite:nitro",
+      "spec": "google/gemini-2.5-flash",
+      "copy": "google/gemini-2.5-flash-lite:nitro",
+      "qa": "anthropic/claude-haiku-4.5",
+      "escalation": "anthropic/claude-sonnet-4.6"
+    },
+    "archetype_display": "mixed batch",
+    "archetype_mix": [
+      "calculator",
+      "tool",
+      "generator"
+    ],
+    "forced_design_theme": "aperture-lab",
+    "forced_structure_preset": "tool-first-rail",
+    "site_idea_title": "Outil de Planification de Randonnées Éco-responsables en France",
+    "site_idea_summary": "Organisez vos itinéraires de randonnée en privilégiant les sentiers balisés, les zones protégées et les pratiques respectueuses de l'environnement. Découvrez la France durablement."
+  },
+  "site_spec": {
+    "slug": "outil-de-planification-de-randonnees-eco-respon-8a99fe7f",
+    "theme": {
+      "name": "Aperture Lab",
+      "slug": "aperture-lab",
+      "eyebrow": "Interface Research",
+      "family": "aperture-lab",
+      "moods": [
+        "technical",
+        "experimental",
+        "smart",
+        "crisp"
+      ],
+      "archetypes": [
+        "tool",
+        "generator",
+        "calculator"
+      ],
+      "niches": [
+        "ai tools",
+        "research",
+        "testing",
+        "labs",
+        "analysis"
+      ],
+      "keywords": [
+        "lab",
+        "research",
+        "interface",
+        "signal",
+        "smart"
+      ],
+      "token_index": [
+        "analysis",
+        "aperture",
+        "calculator",
+        "crisp",
+        "experimental",
+        "generator",
+        "interface",
+        "lab",
+        "labs",
+        "research",
+        "signal",
+        "smart",
+        "technical",
+        "testing",
+        "tool",
+        "tools"
+      ],
+      "font_embed": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap",
+      "display_font": "\"Space Grotesk\", sans-serif",
+      "body_font": "\"Inter\", sans-serif",
+      "layout": "asymmetric",
+      "card_style": "glass",
+      "button_style": "gradient",
+      "decor_style": "ribbons",
+      "hero_template": "0.88fr 1.12fr",
+      "seo_template": "1.18fr 0.82fr",
+      "feature_columns": 2,
+      "faq_columns": 3,
+      "hero_min_height": "78vh",
+      "panel_radius": "28px",
+      "card_radius": "26px",
+      "chip_radius": "999px",
+      "button_radius": "18px",
+      "outline_width": "1px",
+      "backdrop_blur": "16px",
+      "palette": {
+        "bg": "radial-gradient(circle at top, #e0f2fe 0%, #dbeafe 30%, #0f172a 100%)",
+        "surface": "rgba(15,23,42,0.78)",
+        "surface_border": "rgba(56,189,248,0.18)",
+        "text": "#eff6ff",
+        "muted": "#cbd5e1",
+        "accent": "#38bdf8",
+        "accent_alt": "#22c55e",
+        "hero_glow": "rgba(56, 189, 248, 0.18)",
+        "button_text": "#062236",
+        "panel_alt": "rgba(255,255,255,0.04)",
+        "shadow": "0 26px 80px rgba(2, 6, 23, 0.34)",
+        "input_fill": "rgba(255,255,255,0.05)"
+      }
+    },
+    "structure": {
+      "name": "Tool First Rail",
+      "slug": "tool-first-rail",
+      "hero_variant": "tool-first",
+      "proof_variant": "checklist",
+      "section_order": [
+        "proof",
+        "features",
+        "seo",
+        "faq"
+      ],
+      "feature_columns": 2,
+      "faq_columns": 2,
+      "family": "interaction-forward",
+      "moods": [
+        "direct",
+        "practical",
+        "fast"
+      ],
+      "archetypes": [
+        "tool",
+        "calculator",
+        "generator"
+      ],
+      "niches": [
+        "qr",
+        "validators",
+        "quick utilities",
+        "lead tools"
+      ],
+      "keywords": [
+        "interaction",
+        "fast",
+        "widget",
+        "action"
+      ],
+      "token_index": [
+        "action",
+        "calculator",
+        "checklist",
+        "direct",
+        "faq",
+        "fast",
+        "features",
+        "first",
+        "forward",
+        "generator",
+        "interaction",
+        "lead",
+        "practical",
+        "proof",
+        "quick",
+        "rail",
+        "seo",
+        "tool",
+        "tools",
+        "utilities",
+        "validators",
+        "widget"
+      ]
+    },
+    "render_direction": "worksheet-flow",
+    "render_direction_name": "Worksheet Flow",
+    "page_blueprint": "worksheet-cascade",
+    "page_blueprint_name": "Worksheet Cascade",
+    "title": "Outil de Planification de Randonnées Éco-responsables en France",
+    "tagline": "Un parcours guidé pour obtenir un résultat directement exploitable.",
+    "description": "Organisez vos itinéraires de randonnée en privilégiant les sentiers balisés, les zones protégées et les pratiques respectueuses de l'environnement. Découvrez la France durablement.",
+    "feature_prefix": "Bloc",
+    "action": "Calculer le tableau de bord",
+    "cta_primary": "Voir la suite",
+    "cta_secondary": "Consulter la FAQ",
+    "inputs": [
+      {
+        "id": "waste_volume",
+        "label": "Déchets mensuels (kg)",
+        "type": "number",
+        "placeholder": "2400",
+        "weight": 1.0
+      },
+      {
+        "id": "recycling_share",
+        "label": "Part recyclée (%)",
+        "type": "number",
+        "placeholder": "48",
+        "weight": 0.65
+      },
+      {
+        "id": "pickups_per_month",
+        "label": "Collectes par mois",
+        "type": "number",
+        "placeholder": "6",
+        "weight": 0.35
+      }
+    ],
+    "hero_metrics": [
+      {
+        "value": "Worksheet Flow",
+        "label": "Cadence"
+      },
+      {
+        "value": "3",
+        "label": "Entrées"
+      },
+      {
+        "value": "Tableau de bord",
+        "label": "Sortie"
+      }
+    ],
+    "trust_labels": [
+      "Worksheet Flow",
+      "Voir la suite",
+      "Tableau de bord",
+      "Utilitaire immédiat",
+      "Structure SEO claire"
+    ],
+    "result_label": "Tableau de bord",
+    "result_unit": "",
+    "runtime_mode": "waste_dashboard",
+    "page_variant": "classic",
+    "faq_topic": "Outil de Planification de Randonnées Éco-responsables en France",
+    "faq_entries": [
+      {
+        "question": "Pourquoi utiliser cet outil pour Outil de Planification de Randonnées Éco-responsables en France ?",
+        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
+      },
+      {
+        "question": "Le résultat est-il immédiat ?",
+        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
+      },
+      {
+        "question": "Cette page est-elle adaptée au SEO ?",
+        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
+      }
+    ],
+    "seo_paragraphs": [
+      "Cette page capte une intention forte autour de Outil de Planification de Randonnées Éco-responsables en France et la transforme en action utile pour un public situé sur France.",
+      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
+      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
+    ],
+    "feature_cards": [
+      {
+        "title": "Saisie de départ",
+        "text": "L'outil isole un signal nette à partir d'un sujet concret comme Outil de Planification de Randonnées Éco-responsables en France."
+      },
+      {
+        "title": "Traitement guidé",
+        "text": "Le parcours Tool First Rail garde l'interface simple même quand l'entrée est plus dense."
+      },
+      {
+        "title": "Sortie exploitable",
+        "text": "La prochaine action devient immédiate grâce à une sortie pensée pour une décision rapide."
+      }
+    ],
+    "proof_cards": [
+      {
+        "title": "Repère initial",
+        "text": "Aperture Lab cadre la page avec une lecture nette qui rassure dès le premier écran."
+      },
+      {
+        "title": "Étape validée",
+        "text": "Tool First Rail met le résultat en avant avec une hiérarchie simple et directement exploitable."
+      },
+      {
+        "title": "Suite concrète",
+        "text": "Le CTA mène vers une action immédiate, sans exposer l'utilisateur à un écran inutile."
+      }
+    ]
+  }
+}
