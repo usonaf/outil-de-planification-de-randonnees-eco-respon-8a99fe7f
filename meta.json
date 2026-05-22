@@ -1,0 +1,78 @@
+{
+  "name": "Outil de Planification de Randonnées Éco-responsables en France",
+  "description": "Organisez vos itinéraires de randonnée en privilégiant les sentiers balisés, les zones protégées et les pratiques respectueuses de l'environnement. Découvrez la France durablement.",
+  "theme": "tool",
+  "design_theme": "aperture-lab",
+  "structure_preset": "tool-first-rail",
+  "render_direction": "worksheet-flow",
+  "page_blueprint": "worksheet-cascade",
+  "language": "fr",
+  "country": "FR",
+  "url": null,
+  "expected_url": "https://outil-de-planification-de-randonnees-eco-respon-8a99fe7f.onrender.com",
+  "created": "2026-05-22T03:28:10.006666+00:00",
+  "owner_user_id": "user-1774822953462",
+  "owner_username": "admin",
+  "owner_display_name": "Administrator",
+  "provider_space_id": "provider-space",
+  "provider_space_name": "Provider space",
+  "status": "failed",
+  "run_id": "run-1779420140546",
+  "external_site_request_id": null,
+  "external_client_ref": null,
+  "external_source_label": null,
+  "source_type": "generated",
+  "publish_target": "render",
+  "mode": "production",
+  "github": {
+    "status": "pending"
+  },
+  "deployment": {
+    "status": "failed"
+  },
+  "qa": {
+    "status": "fail",
+    "detail": "desktop: Le parcours fonctionnel a produit un resultat exploitable. | mobile: La zone de resultat n'a pas renvoye de contenu exploitable.",
+    "target_url": "http://127.0.0.1:33025/index.html?__qa=functional",
+    "mode": "waste_dashboard",
+    "headline": "48%",
+    "primary_url": "#seo",
+    "desktop": {
+      "status": "pass",
+      "detail": "Le parcours fonctionnel a produit un resultat exploitable.",
+      "target_url": "http://127.0.0.1:33025/index.html?__qa=functional",
+      "viewport": "desktop",
+      "mode": "waste_dashboard",
+      "headline": "48%",
+      "primary_url": "#seo",
+      "reported_viewport": "desktop",
+      "attempt": 2,
+      "updated_at": 1779467148
+    },
+    "mobile": {
+      "status": "fail",
+      "detail": "La zone de resultat n'a pas renvoye de contenu exploitable.",
+      "target_url": "http://127.0.0.1:33025/index.html?__qa=functional",
+      "viewport": "mobile",
+      "mode": "waste_dashboard",
+      "headline": "48%",
+      "primary_url": "#seo",
+      "reported_viewport": "mobile",
+      "attempt": 2,
+      "updated_at": 1779467151
+    },
+    "updated_at": 1779467151
+  },
+  "features": [
+    "Hero pattern: tool-first",
+    "Proof module: checklist",
+    "Design theme: Aperture Lab",
+    "Render direction: Worksheet Flow",
+    "Page blueprint: Worksheet Cascade",
+    "Runtime mode: waste_dashboard",
+    "Generation mode: template",
+    "Artifact rendered, awaiting QA and deployment"
+  ],
+  "failure_reason": "desktop: Le parcours fonctionnel a produit un resultat exploitable. | mobile: La zone de resultat n'a pas renvoye de contenu exploitable.",
+  "failed_at": 1779467151
+}
