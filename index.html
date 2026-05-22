@@ -1,0 +1,3494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outil de Planification de Randonnées Éco-responsables en France | Un parcours guidé pour obtenir un résultat directement exploitable.</title>
+    <meta name="description" content="Organisez vos itinéraires de randonnée en privilégiant les sentiers balisés, les zones protégées et les pratiques respectueuses de l&#x27;environnement. Découvrez la France durablement.">
+    <meta name="keywords" content="Outil de Planification de Randonnées Éco-responsables en France, tool, FR, outil en ligne, simulation rapide">
+    <meta name="author" content="Outil de Planification de Randonnées Éco-responsables en France">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://outil-de-planification-de-randonnees-eco-respon-8a99fe7f.onrender.com">
+    <meta property="og:title" content="Outil de Planification de Randonnées Éco-responsables en France">
+    <meta property="og:description" content="Organisez vos itinéraires de randonnée en privilégiant les sentiers balisés, les zones protégées et les pratiques respectueuses de l&#x27;environnement. Découvrez la France durablement.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://outil-de-planification-de-randonnees-eco-respon-8a99fe7f.onrender.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+    <meta property="og:locale" content="fr_FR">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Outil de Planification de Randonnées Éco-responsables en France",
+        "description": "Organisez vos itinéraires de randonnée en privilégiant les sentiers balisés, les zones protégées et les pratiques respectueuses de l&#39;environnement. Découvrez la France durablement.",
+        "url": "https://outil-de-planification-de-randonnees-eco-respon-8a99fe7f.onrender.com",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web Browser"
+    }
+    </script>
+    <style>
+        :root {
+            --bg: radial-gradient(circle at top, #e0f2fe 0%, #dbeafe 30%, #0f172a 100%);
+            --surface: rgba(15,23,42,0.78);
+            --surface-border: rgba(56,189,248,0.18);
+            --panel-alt: rgba(255,255,255,0.04);
+            --text: #eff6ff;
+            --muted: #cbd5e1;
+            --accent: #38bdf8;
+            --accent-alt: #22c55e;
+            --hero-glow: rgba(56, 189, 248, 0.18);
+            --button-text: #062236;
+            --panel-shadow: 0 26px 80px rgba(2, 6, 23, 0.34);
+            --input-fill: rgba(255,255,255,0.05);
+            --font-display: "Space Grotesk", sans-serif;
+            --font-body: "Inter", sans-serif;
+            --hero-template: 0.88fr 1.12fr;
+            --seo-template: 1.18fr 0.82fr;
+            --feature-columns: 2;
+            --faq-columns: 2;
+            --hero-min-height: 78vh;
+            --panel-radius: 28px;
+            --card-radius: 26px;
+            --chip-radius: 999px;
+            --button-radius: 18px;
+            --outline-width: 1px;
+            --backdrop-blur: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            color: var(--text);
+            font-family: var(--font-body);
+            background:
+                radial-gradient(circle at 12% 12%, var(--hero-glow), transparent 28%),
+                linear-gradient(160deg, rgba(255, 255, 255, 0.02), transparent 58%),
+                var(--bg);
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            inset: auto -10vw -14vh auto;
+            width: 38vw;
+            height: 38vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 62%);
+            filter: blur(20px);
+            opacity: 0.45;
+        }
+
+        body.decor-grid::before {
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: radial-gradient(circle at center, black 36%, transparent 84%);
+            opacity: 0.22;
+        }
+
+        body.decor-orbs::before {
+            background:
+                radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.12), transparent 22%),
+                radial-gradient(circle at 88% 16%, rgba(255, 255, 255, 0.08), transparent 18%),
+                radial-gradient(circle at 70% 82%, var(--hero-glow), transparent 24%);
+            opacity: 0.92;
+        }
+
+        body.decor-ribbons::before {
+            background:
+                linear-gradient(128deg, transparent 0 18%, rgba(255, 255, 255, 0.08) 18% 21%, transparent 21% 100%),
+                linear-gradient(148deg, transparent 0 56%, rgba(255, 255, 255, 0.07) 56% 59%, transparent 59% 100%);
+            opacity: 0.7;
+        }
+
+        body.decor-scanlines::before {
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.06),
+                rgba(255, 255, 255, 0.06) 1px,
+                transparent 1px,
+                transparent 3px
+            );
+            opacity: 0.2;
+            mix-blend-mode: screen;
+        }
+
+        body.decor-paper::before {
+            background:
+                radial-gradient(circle at 16% 18%, rgba(255, 255, 255, 0.44), transparent 28%),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 42%);
+            opacity: 0.5;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .page-shell {
+            position: relative;
+            z-index: 1;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: clamp(20px, 3vw, 38px) clamp(18px, 3vw, 28px) 92px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: var(--hero-template);
+            gap: 28px;
+            align-items: stretch;
+            min-height: var(--hero-min-height);
+        }
+
+        .panel,
+        .feature-card,
+        .faq-card,
+        .seo-rail {
+            border: var(--outline-width) solid var(--surface-border);
+            border-radius: var(--panel-radius);
+            background: linear-gradient(180deg, var(--surface), var(--panel-alt));
+            box-shadow: var(--panel-shadow);
+            backdrop-filter: blur(var(--backdrop-blur));
+        }
+
+        .panel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .panel::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.08), transparent 42%);
+            opacity: 0.65;
+            pointer-events: none;
+        }
+
+        .hero-copy,
+        .tool-panel,
+        .section {
+            position: relative;
+            z-index: 1;
+            padding: clamp(24px, 3.2vw, 46px);
+        }
+
+        .hero-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 34px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-size: 11px;
+            color: var(--accent);
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.8;
+        }
+
+        h1,
+        h2,
+        .tool-panel__title,
+        .result-card strong {
+            font-family: var(--font-display);
+        }
+
+        h1 {
+            margin: 18px 0 18px;
+            max-width: 10.5ch;
+            font-size: clamp(3rem, 9vw, 6.5rem);
+            line-height: 0.92;
+            letter-spacing: -0.04em;
+            text-wrap: balance;
+        }
+
+        body.headline-long h1 {
+            max-width: 12.6ch;
+            font-size: clamp(2.8rem, 6.8vw, 5.35rem);
+            line-height: 0.95;
+        }
+
+        body.headline-xlong h1 {
+            max-width: 16.2ch;
+            font-size: clamp(2rem, 4.6vw, 4.05rem);
+            line-height: 0.99;
+            letter-spacing: -0.03em;
+        }
+
+        @media (min-width: 1100px) {
+            body.headline-long .hero,
+            body.headline-xlong .hero {
+                align-items: start;
+                min-height: auto;
+                gap: 22px;
+            }
+
+            body.headline-long .hero-copy,
+            body.headline-xlong .hero-copy {
+                min-width: 0;
+                gap: 22px;
+            }
+
+            body.headline-long .hero-copy,
+            body.headline-xlong .hero-copy,
+            body.headline-long .tool-panel,
+            body.headline-xlong .tool-panel {
+                padding: clamp(22px, 2.4vw, 34px);
+            }
+
+            body.headline-long h1 {
+                max-width: 15.8ch;
+                font-size: clamp(2.2rem, 4.5vw, 3.95rem);
+                line-height: 0.99;
+            }
+
+            body.headline-xlong h1 {
+                max-width: 20ch;
+                font-size: clamp(1.66rem, 3.3vw, 2.92rem);
+                line-height: 1.03;
+                letter-spacing: -0.024em;
+            }
+
+            body.headline-long .lead,
+            body.headline-xlong .lead {
+                max-width: 46rem;
+                font-size: 15px;
+                line-height: 1.62;
+            }
+
+            body.headline-long .hero-stats,
+            body.headline-xlong .hero-stats {
+                gap: 12px;
+            }
+
+            body.headline-long .hero-stat,
+            body.headline-xlong .hero-stat {
+                padding: 14px 15px;
+            }
+
+            body.headline-long .hero-stat strong,
+            body.headline-xlong .hero-stat strong {
+                font-size: clamp(0.98rem, 1.34vw, 1.16rem);
+                margin-bottom: 4px;
+            }
+
+            body.headline-long .hero-stat span,
+            body.headline-xlong .hero-stat span {
+                font-size: 12px;
+            }
+        }
+
+        .lead {
+            max-width: 52rem;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1.78;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .hero-stat {
+            padding: 16px 18px;
+            border-radius: var(--card-radius);
+            border: var(--outline-width) solid var(--surface-border);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .hero-stat span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .trust-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .trust-chip {
+            padding: 11px 15px;
+            border-radius: var(--chip-radius);
+            border: var(--outline-width) solid var(--surface-border);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--muted);
+            font-size: 13px;
+            letter-spacing: 0.01em;
+        }
+
+        .tool-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .tool-panel__title {
+            margin: 0;
+            font-size: clamp(2rem, 3vw, 3rem);
+            line-height: 1;
+        }
+
+        .tool-panel__intro {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .field-grid {
+            display: grid;
+            gap: 14px;
+        }
+
+        .tool-panel label {
+            display: block;
+        }
+
+        .tool-panel span {
+            display: block;
+            margin-bottom: 9px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .tool-panel input,
+        .tool-panel select {
+            width: 100%;
+            min-height: 54px;
+            padding: 14px 16px;
+            border-radius: 16px;
+            border: var(--outline-width) solid var(--surface-border);
+            background: var(--input-fill);
+            color: var(--text);
+            font-family: inherit;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .tool-panel input:focus,
+        .tool-panel select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06);
+        }
+
+        .button {
+            width: 100%;
+            min-height: 56px;
+            border: var(--outline-width) solid transparent;
+            border-radius: var(--button-radius);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 700;
+            transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+            background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+            color: var(--button-text);
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+        }
+
+        .result-card {
+            display: none;
+            padding: 22px;
+            border-radius: var(--card-radius);
+            border: var(--outline-width) solid var(--surface-border);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .result-card.is-visible {
+            display: block;
+        }
+
+        .result-card strong {
+            display: block;
+            margin-top: 8px;
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            line-height: 1;
+        }
+
+        .result-card p {
+            margin-bottom: 0;
+            color: var(--muted);
+            line-height: 1.7;
+            white-space: pre-line;
+        }
+
+        .result-preview {
+            display: grid;
+            place-items: center;
+            margin-top: 18px;
+            padding: 18px;
+            border-radius: var(--card-radius);
+            border: var(--outline-width) solid var(--surface-border);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .result-preview[hidden] {
+            display: none;
+        }
+
+        .result-preview img {
+            width: min(100%, 320px);
+            aspect-ratio: 1;
+            display: block;
+            object-fit: contain;
+            background: #ffffff;
+            border-radius: calc(var(--card-radius) - 10px);
+            padding: 14px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .result-actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .result-rich {
+            margin-top: 18px;
+        }
+
+        .result-rich[hidden] {
+            display: none;
+        }
+
+        .result-grid,
+        .swatch-grid,
+        .profile-grid,
+        .audit-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .result-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .result-metric,
+        .swatch-card,
+        .profile-card,
+        .audit-card {
+            padding: 16px;
+            border-radius: calc(var(--card-radius) - 2px);
+            border: var(--outline-width) solid var(--surface-border);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .result-metric strong,
+        .swatch-card strong,
+        .profile-card strong,
+        .audit-card strong {
+            display: block;
+            margin-bottom: 6px;
+            font-family: var(--font-display);
+            font-size: 1rem;
+        }
+
+        .result-metric span,
+        .profile-card span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .result-list {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--muted);
+            line-height: 1.72;
+            display: grid;
+            gap: 10px;
+        }
+
+        .result-code {
+            margin: 16px 0 0;
+            padding: 16px;
+            overflow-x: auto;
+            border-radius: calc(var(--card-radius) - 2px);
+            border: var(--outline-width) solid var(--surface-border);
+            background: rgba(0, 0, 0, 0.18);
+            color: var(--text);
+            font-family: var(--font-body);
+            white-space: pre-wrap;
+            line-height: 1.65;
+        }
+
+        .swatch-grid {
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+
+        .swatch-chip {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: calc(var(--card-radius) - 6px);
+            border: var(--outline-width) solid rgba(255, 255, 255, 0.16);
+            margin-bottom: 12px;
+        }
+
+        .swatch-card code {
+            color: var(--muted);
+            font-family: var(--font-body);
+            font-size: 12px;
+        }
+
+        .profile-grid {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+
+        .profile-card p,
+        .audit-card p {
+            margin: 6px 0 0;
+            color: var(--muted);
+            line-height: 1.58;
+        }
+
+        .audit-grid {
+            margin-top: 14px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        }
+
+        .audit-pass {
+            border-color: rgba(56, 189, 120, 0.45);
+        }
+
+        .audit-warn {
+            border-color: rgba(251, 191, 36, 0.45);
+        }
+
+        .contrast-preview {
+            display: grid;
+            grid-template-columns: minmax(0, 160px) minmax(0, 1fr);
+            gap: 14px;
+            align-items: center;
+        }
+
+        .contrast-sample {
+            min-height: 120px;
+            display: grid;
+            place-items: center;
+            border-radius: calc(var(--card-radius) - 2px);
+            border: var(--outline-width) solid var(--surface-border);
+            font-family: var(--font-display);
+            font-size: 52px;
+        }
+
+        .contrast-meta span {
+            display: block;
+            margin-top: 6px;
+            color: var(--muted);
+        }
+
+        .result-actions a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 46px;
+            text-decoration: none;
+            border-radius: calc(var(--button-radius) - 2px);
+            border: var(--outline-width) solid var(--surface-border);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .section {
+            margin-top: 28px;
+        }
+
+        .section h2 {
+            margin: 0 0 18px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1;
+        }
+
+        .section-intro {
+            margin: 0 0 24px;
+            color: var(--muted);
+            max-width: 48rem;
+            line-height: 1.7;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(var(--feature-columns), minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(var(--faq-columns), minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .feature-card,
+        .faq-card,
+        .proof-card,
+        .seo-rail {
+            padding: 22px;
+            border-radius: var(--card-radius);
+        }
+
+        .feature-card h3,
+        .faq-card h3,
+        .proof-card h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .feature-card p,
+        .faq-card p,
+        .proof-card p {
+            color: var(--muted);
+            line-height: 1.72;
+            margin: 0;
+        }
+
+        .seo-columns {
+            display: grid;
+            grid-template-columns: var(--seo-template);
+            gap: 20px;
+        }
+
+        .seo-copy {
+            color: var(--muted);
+            line-height: 1.82;
+        }
+
+        .seo-copy p {
+            margin: 0 0 16px;
+        }
+
+        .seo-rail strong {
+            display: block;
+            margin-bottom: 16px;
+            font-size: 13px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .seo-rail ul {
+            margin: 0;
+            padding-left: 18px;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        footer {
+            margin-top: 38px;
+            padding: 18px 2px 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        body.layout-showcase:not(.hero-stacked) .hero-copy {
+            order: 2;
+        }
+
+        body.layout-showcase:not(.hero-stacked) .tool-panel {
+            order: 1;
+            transform: translateY(42px);
+        }
+
+        body.layout-editorial .hero {
+            grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+            gap: 22px;
+            align-items: end;
+            min-height: auto;
+        }
+
+        body.layout-editorial .hero-copy {
+            justify-content: flex-start;
+            gap: 28px;
+        }
+
+        body.layout-editorial h1 {
+            max-width: 9.6ch;
+            font-size: clamp(2.9rem, 6.8vw, 5.8rem);
+        }
+
+        body.layout-editorial .lead {
+            max-width: 40rem;
+        }
+
+        body.layout-editorial .tool-panel {
+            max-width: none;
+            margin: 0;
+            align-self: stretch;
+        }
+
+        body.layout-editorial .hero-stats {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        body.layout-asymmetric .hero-copy {
+            transform: translateY(28px);
+        }
+
+        body.layout-asymmetric .tool-panel {
+            transform: rotate(-1deg);
+        }
+
+        body.layout-swiss .page-shell {
+            max-width: 1380px;
+        }
+
+        body.layout-swiss h1 {
+            max-width: 12ch;
+            letter-spacing: -0.06em;
+        }
+
+        body.layout-swiss .trust-chip {
+            border-radius: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 11px;
+        }
+
+        body.page-console .page-shell {
+            max-width: 1420px;
+        }
+
+        body.page-console .hero {
+            grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+            gap: 18px;
+            align-items: start;
+            min-height: auto;
+        }
+
+        body.page-console .hero-copy {
+            gap: 20px;
+            min-width: 0;
+        }
+
+        body.page-console .hero-copy,
+        body.page-console .tool-panel,
+        body.page-editorial .hero-copy,
+        body.page-editorial .tool-panel,
+        body.page-showcase .hero-copy,
+        body.page-showcase .tool-panel {
+            padding: clamp(22px, 2.6vw, 32px);
+        }
+
+        body.page-console h1 {
+            max-width: 14ch;
+            font-size: clamp(2.3rem, 5vw, 4.5rem);
+        }
+
+        body.page-console .hero-copy .eyebrow {
+            padding: 12px 14px;
+            border-radius: 999px;
+            border: var(--outline-width) solid var(--surface-border);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        body.page-console .hero-stats {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        body.page-console .trust-row,
+        body.page-editorial .trust-row,
+        body.page-showcase .trust-row {
+            display: none;
+        }
+
+        body.page-console .tool-panel {
+            border-radius: calc(var(--panel-radius) + 4px);
+        }
+
+        body.page-console .section {
+            margin-top: 20px;
+        }
+
+        body.page-console .feature-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        body.page-editorial .hero {
+            grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+            min-height: auto;
+            gap: 18px;
+            align-items: start;
+        }
+
+        body.page-editorial .hero-copy {
+            max-width: none;
+            gap: 20px;
+            min-width: 0;
+        }
+
+        body.page-editorial h1 {
+            max-width: 14.5ch;
+            font-size: clamp(2.3rem, 5vw, 4.4rem);
+        }
+
+        body.page-editorial .tool-panel {
+            max-width: none;
+            width: auto;
+            margin: 0;
+            transform: none;
+            align-self: start;
+        }
+
+        body.page-editorial .section {
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        body.page-editorial .feature-grid {
+            grid-template-columns: 1.1fr 1fr 1fr;
+        }
+
+        body.page-editorial .hero-stats {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        body.page-showcase .hero {
+            grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+            min-height: auto;
+            gap: 20px;
+            align-items: start;
+        }
+
+        body.page-showcase .hero-copy {
+            padding-bottom: clamp(28px, 4vw, 48px);
+            gap: 20px;
+            transform: none;
+        }
+
+        body.page-showcase h1 {
+            max-width: 16ch;
+            font-size: clamp(2.2rem, 4.8vw, 4.2rem);
+        }
+
+        body.page-showcase .tool-panel {
+            width: auto;
+            margin: 26px 0 0;
+            transform: none;
+        }
+
+        body.page-showcase .section {
+            margin-top: 22px;
+        }
+
+        body.page-showcase .feature-grid,
+        body.page-showcase .proof-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        body.page-showcase .hero-stats {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        body.hero-tool-first .hero-copy {
+            order: 2;
+        }
+
+        body.hero-tool-first .tool-panel {
+            order: 1;
+        }
+
+        body.hero-stacked .hero {
+            grid-template-columns: 1fr;
+            min-height: auto;
+        }
+
+        body.hero-stacked .hero-copy {
+            gap: 26px;
+        }
+
+        body.hero-stacked .tool-panel {
+            max-width: 980px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 1101px) {
+            body.hero-stacked.tool-dense .hero {
+                grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+                gap: 24px;
+                align-items: start;
+            }
+
+            body.hero-stacked.tool-dense .hero-copy {
+                min-width: 0;
+            }
+
+            body.hero-stacked.tool-dense .tool-panel {
+                max-width: none;
+                margin: 0;
+            }
+
+            body.hero-stacked.tool-dense .hero-stats {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        body.hero-stacked.headline-long .hero {
+            gap: 22px;
+        }
+
+        body.hero-stacked.headline-long .hero-copy {
+            gap: 22px;
+        }
+
+        body.hero-stacked.headline-xlong .hero {
+            gap: 18px;
+        }
+
+        body.hero-stacked.headline-xlong .hero-copy {
+            gap: 18px;
+        }
+
+        body.hero-stacked.headline-xlong .hero-stat strong {
+            font-size: 20px;
+        }
+
+        @media (min-width: 1101px) {
+            body.hero-stacked.headline-xlong .hero {
+                grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
+                gap: 22px;
+                align-items: start;
+            }
+
+            body.hero-stacked.headline-xlong .hero-copy {
+                min-width: 0;
+            }
+
+            body.hero-stacked.headline-xlong .tool-panel {
+                max-width: none;
+                margin: 0;
+            }
+
+            body.hero-stacked.headline-xlong .hero-stats {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        body.hero-command .hero {
+            grid-template-columns: minmax(0, 1.14fr) minmax(320px, 0.86fr);
+            align-items: start;
+        }
+
+        body.hero-command .hero-copy {
+            min-width: 0;
+        }
+
+        body.hero-command .hero-stats {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        body.hero-command .hero-stat strong,
+        body.hero-command .hero-stat span {
+            overflow-wrap: anywhere;
+        }
+
+        body.hero-command .hero-stat strong {
+            font-size: clamp(1rem, 1.8vw, 1.4rem);
+            line-height: 1.12;
+        }
+
+        @media (min-width: 1101px) {
+            body.hero-command.headline-long .hero,
+            body.hero-command.headline-xlong .hero {
+                grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.98fr);
+                gap: 22px;
+                min-height: auto;
+            }
+
+            body.hero-command.headline-long .hero-copy,
+            body.hero-command.headline-xlong .hero-copy {
+                gap: 20px;
+            }
+
+            body.hero-command.headline-long .lead,
+            body.hero-command.headline-xlong .lead {
+                max-width: 44rem;
+                font-size: 16px;
+                line-height: 1.62;
+            }
+
+            body.hero-command.headline-long h1 {
+                max-width: 14.8ch;
+                font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+                line-height: 0.98;
+            }
+
+            body.hero-command.headline-xlong h1 {
+                max-width: 18.4ch;
+                font-size: clamp(1.8rem, 3.7vw, 3.25rem);
+                line-height: 1.02;
+                letter-spacing: -0.025em;
+            }
+
+            body.hero-command.headline-xlong .hero-stat strong {
+                font-size: clamp(0.95rem, 1.35vw, 1.18rem);
+            }
+        }
+
+        body.hero-poster .hero-copy {
+            transform: rotate(-1deg);
+        }
+
+        body.hero-poster .tool-panel {
+            transform: translateY(22px) rotate(1deg);
+        }
+
+        body.hero-poster.tool-dense .hero {
+            min-height: auto;
+        }
+
+        body.hero-poster.tool-dense .hero-copy {
+            gap: 26px;
+        }
+
+        @media (min-width: 1100px) {
+            body.hero-poster.headline-long .hero,
+            body.hero-poster.headline-xlong .hero {
+                grid-template-columns: minmax(0, 1.04fr) minmax(340px, 0.96fr);
+                align-items: start;
+                min-height: auto;
+            }
+
+            body.hero-poster.headline-long .hero-copy,
+            body.hero-poster.headline-xlong .hero-copy {
+                gap: 18px;
+                transform: none;
+                min-width: 0;
+            }
+
+            body.hero-poster.headline-long .tool-panel,
+            body.hero-poster.headline-xlong .tool-panel {
+                transform: none;
+            }
+
+            body.hero-poster.headline-long h1 {
+                max-width: 20.5ch;
+                font-size: clamp(1.95rem, 3.95vw, 3.45rem);
+                line-height: 1.01;
+            }
+
+            body.hero-poster.headline-xlong h1 {
+                max-width: 22ch;
+                font-size: clamp(1.5rem, 3vw, 2.65rem);
+                line-height: 1.04;
+                letter-spacing: -0.018em;
+            }
+
+            body.hero-poster.headline-long .lead,
+            body.hero-poster.headline-xlong .lead {
+                max-width: 42rem;
+                font-size: 14px;
+                line-height: 1.55;
+            }
+
+            body.hero-poster.headline-long .hero-stats,
+            body.hero-poster.headline-xlong .hero-stats {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            body.hero-poster.headline-long .hero-stat,
+            body.hero-poster.headline-xlong .hero-stat {
+                padding: 12px 13px;
+            }
+
+            body.hero-poster.headline-long .hero-stat strong,
+            body.hero-poster.headline-xlong .hero-stat strong {
+                font-size: clamp(0.92rem, 1.16vw, 1.05rem);
+                margin-bottom: 3px;
+            }
+
+            body.hero-poster.headline-long .hero-stat span,
+            body.hero-poster.headline-xlong .hero-stat span {
+                font-size: 11px;
+            }
+        }
+
+        body.proof-checklist .proof-grid,
+        body.proof-rail .proof-grid {
+            grid-template-columns: 1fr;
+        }
+
+        body.proof-steps .proof-card {
+            position: relative;
+            padding-left: 70px;
+        }
+
+        body.proof-steps .proof-card::before {
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            left: 22px;
+            top: 22px;
+            width: 32px;
+            height: 32px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--button-text);
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        body.proof-steps .section--proof {
+            counter-reset: step;
+        }
+
+        body.proof-rail .proof-card {
+            display: grid;
+            grid-template-columns: 180px minmax(0, 1fr);
+            align-items: start;
+            gap: 18px;
+        }
+
+        body.proof-badges .proof-card h3 {
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 13px;
+        }
+
+        body.card-brutal .panel,
+        body.card-brutal .feature-card,
+        body.card-brutal .faq-card,
+        body.card-brutal .proof-card,
+        body.card-brutal .seo-rail,
+        body.card-brutal .hero-stat,
+        body.card-brutal .result-card {
+            backdrop-filter: none;
+            border-width: 3px;
+            border-radius: 14px;
+            box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.22);
+        }
+
+        body.card-brutal .panel::before {
+            display: none;
+        }
+
+        body.card-paper .panel,
+        body.card-paper .feature-card,
+        body.card-paper .faq-card,
+        body.card-paper .proof-card,
+        body.card-paper .seo-rail,
+        body.card-paper .hero-stat,
+        body.card-paper .result-card {
+            backdrop-filter: none;
+            background: linear-gradient(180deg, var(--surface), var(--panel-alt));
+        }
+
+        body.card-outline .panel,
+        body.card-outline .feature-card,
+        body.card-outline .faq-card,
+        body.card-outline .proof-card,
+        body.card-outline .seo-rail,
+        body.card-outline .hero-stat,
+        body.card-outline .result-card {
+            backdrop-filter: none;
+            box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+        }
+
+        body.card-neon .panel,
+        body.card-neon .feature-card,
+        body.card-neon .faq-card,
+        body.card-neon .proof-card,
+        body.card-neon .seo-rail,
+        body.card-neon .hero-stat,
+        body.card-neon .result-card {
+            box-shadow:
+                0 0 0 1px rgba(255, 255, 255, 0.08),
+                0 0 22px rgba(255, 255, 255, 0.08),
+                0 0 54px var(--hero-glow);
+        }
+
+        body.button-outline .button {
+            background: transparent;
+            color: var(--text);
+            border-color: var(--surface-border);
+            box-shadow: none;
+        }
+
+        body.button-slab .button {
+            background: var(--accent);
+            color: var(--button-text);
+            border-color: var(--surface-border);
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        body.button-glow .button {
+            box-shadow:
+                0 0 0 1px rgba(255, 255, 255, 0.12),
+                0 0 24px var(--hero-glow),
+                0 18px 36px rgba(0, 0, 0, 0.16);
+        }
+
+        .hero-belt {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .hero-note {
+            padding: 14px 16px;
+            border-radius: calc(var(--card-radius) - 2px);
+            border: var(--outline-width) solid var(--surface-border);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .hero--signal-bento,
+        .hero--atlas-report {
+            grid-template-columns: 1fr;
+            min-height: auto;
+        }
+
+        .hero--signal-bento .hero-belt,
+        .hero--atlas-report .hero-belt {
+            margin-bottom: 2px;
+        }
+
+        .hero--signal-bento .hero-main,
+        .hero--atlas-report .hero-main {
+            display: grid;
+            grid-template-columns: minmax(0, 1.04fr) minmax(340px, 0.96fr);
+            gap: 22px;
+        }
+
+        .hero--signal-bento h1 {
+            max-width: 17.8ch;
+            font-size: clamp(1.84rem, 3.2vw, 3rem);
+            line-height: 0.98;
+            letter-spacing: -0.028em;
+        }
+
+        .hero--signal-bento .lead {
+            max-width: 42rem;
+            font-size: 16px;
+            line-height: 1.62;
+        }
+
+        .hero--signal-bento .hero-copy {
+            gap: 18px;
+        }
+
+        .hero--editorial-ledger {
+            grid-template-columns: minmax(0, 1.04fr) minmax(340px, 0.96fr);
+            min-height: auto;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .hero--campaign-slab {
+            grid-template-columns: 1fr;
+            min-height: auto;
+            gap: 18px;
+        }
+
+        .hero-banner {
+            display: grid;
+            gap: 22px;
+        }
+
+        .hero--campaign-slab .tool-panel {
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .hero--worksheet-flow {
+            grid-template-columns: minmax(360px, 0.92fr) minmax(0, 1.08fr);
+            min-height: auto;
+            gap: 22px;
+            align-items: start;
+        }
+
+        .hero--worksheet-flow .tool-panel {
+            order: 1;
+        }
+
+        .hero--worksheet-flow .hero-copy {
+            order: 2;
+        }
+
+        body.direction-editorial-ledger .feature-grid,
+        body.direction-campaign-slab .feature-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        body.direction-worksheet-flow .section,
+        body.direction-atlas-report .section {
+            border-radius: calc(var(--panel-radius) - 2px);
+        }
+
+        body.direction-campaign-slab .hero-stats {
+            gap: 12px;
+        }
+
+        .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-size: 11px;
+            color: var(--accent);
+        }
+
+        .section-kicker::before {
+            content: "";
+            width: 26px;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.78;
+        }
+
+        .sections-shell {
+            display: grid;
+            gap: 24px;
+            margin-top: 28px;
+        }
+
+        .sections-shell .section {
+            margin-top: 0;
+        }
+
+        .shell-standard {
+            grid-template-columns: 1fr;
+        }
+
+        .shell-paired {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: start;
+        }
+
+        .shell-paired__column,
+        .shell-dossier__main,
+        .shell-dossier__aside,
+        .shell-matrix__main,
+        .shell-matrix__aside {
+            display: grid;
+            gap: 24px;
+        }
+
+        .shell-dossier {
+            grid-template-columns: minmax(0, 1.16fr) minmax(280px, 0.84fr);
+            align-items: start;
+        }
+
+        .shell-dossier__aside .section:first-child {
+            position: sticky;
+            top: 22px;
+        }
+
+        .shell-mosaic {
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            align-items: start;
+        }
+
+        .shell-mosaic .section-stage:nth-child(1) {
+            grid-column: span 7;
+        }
+
+        .shell-mosaic .section-stage:nth-child(2) {
+            grid-column: span 5;
+        }
+
+        .shell-mosaic .section-stage:nth-child(n+3) {
+            grid-column: span 6;
+        }
+
+        .shell-cascade {
+            grid-template-columns: 1fr;
+        }
+
+        .shell-cascade .section-stage:nth-child(odd) .section {
+            max-width: 1180px;
+        }
+
+        .shell-cascade .section-stage:nth-child(even) .section {
+            max-width: 1060px;
+            margin-left: auto;
+        }
+
+        .shell-fold {
+            grid-template-columns: 1fr;
+        }
+
+        .shell-fold .section-stage:nth-child(even) .section {
+            transform: translateX(2%);
+        }
+
+        .shell-fold .section-stage:nth-child(odd) .section {
+            transform: translateX(-1.2%);
+        }
+
+        .shell-matrix {
+            grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+            align-items: start;
+        }
+
+        .feature-grid--tiles {
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+        }
+
+        .feature-grid--tiles .feature-card:nth-child(1) {
+            grid-column: span 3;
+        }
+
+        .feature-grid--tiles .feature-card:nth-child(2),
+        .feature-grid--tiles .feature-card:nth-child(3) {
+            grid-column: span 3;
+        }
+
+        .feature-grid--essay,
+        .feature-grid--steps {
+            grid-template-columns: 1fr;
+        }
+
+        .feature-grid--essay .feature-card,
+        .proof-grid--ledger .proof-card,
+        .faq-grid--list .faq-card {
+            display: grid;
+            grid-template-columns: minmax(180px, 0.72fr) minmax(0, 1.28fr);
+            gap: 18px;
+            align-items: start;
+        }
+
+        .feature-grid--essay .feature-card p,
+        .proof-grid--ledger .proof-card p,
+        .faq-grid--list .faq-card p {
+            margin-top: 0;
+        }
+
+        .feature-grid--manifesto {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .feature-grid--manifesto .feature-card:first-child {
+            grid-column: 1 / -1;
+            padding: 28px;
+        }
+
+        .feature-grid--steps .feature-card {
+            position: relative;
+            padding-left: 76px;
+        }
+
+        .section--features .feature-grid--steps {
+            counter-reset: feature-step;
+        }
+
+        .feature-grid--steps .feature-card::before {
+            content: counter(feature-step);
+            counter-increment: feature-step;
+            position: absolute;
+            left: 22px;
+            top: 22px;
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--button-text);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .feature-grid--columns {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .feature-grid--mini-bento {
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+        }
+
+        .feature-grid--mini-bento .feature-card:nth-child(1) {
+            grid-column: span 4;
+        }
+
+        .feature-grid--mini-bento .feature-card:nth-child(2),
+        .feature-grid--mini-bento .feature-card:nth-child(3) {
+            grid-column: span 3;
+        }
+
+        .proof-grid--strip,
+        .proof-grid--metrics {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .proof-grid--ledger,
+        .proof-grid--timeline,
+        .proof-grid--checkpoints {
+            grid-template-columns: 1fr;
+        }
+
+        .proof-grid--timeline,
+        .proof-grid--checkpoints {
+            counter-reset: proof-step;
+        }
+
+        .proof-grid--timeline .proof-card,
+        .proof-grid--checkpoints .proof-card {
+            position: relative;
+            padding-left: 74px;
+        }
+
+        .proof-grid--timeline .proof-card::before,
+        .proof-grid--checkpoints .proof-card::before {
+            position: absolute;
+            left: 22px;
+            top: 22px;
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .proof-grid--timeline .proof-card::before {
+            content: counter(proof-step);
+            counter-increment: proof-step;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text);
+            border: var(--outline-width) solid var(--surface-border);
+        }
+
+        .proof-grid--checkpoints .proof-card::before {
+            content: "✓";
+            background: var(--accent);
+            color: var(--button-text);
+        }
+
+        .proof-grid--spotlight {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .proof-grid--spotlight .proof-card:first-child {
+            grid-column: 1 / -1;
+            padding: 28px;
+        }
+
+        .faq-grid--list,
+        .faq-grid--notes,
+        .faq-grid--interview,
+        .faq-grid--compact {
+            grid-template-columns: 1fr;
+        }
+
+        .faq-grid--split {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .faq-grid--notes .faq-card {
+            border-left: 3px solid var(--accent);
+            padding-left: 24px;
+        }
+
+        .faq-grid--interview .faq-card h3::before {
+            content: "Q";
+            display: inline-grid;
+            place-items: center;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: var(--outline-width) solid var(--surface-border);
+            color: var(--accent);
+            font-size: 12px;
+            vertical-align: middle;
+        }
+
+        .faq-grid--compact .faq-card {
+            padding: 18px 20px;
+        }
+
+        .seo-columns--memo,
+        .seo-columns--context {
+            grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.92fr);
+        }
+
+        .seo-columns--worksheet {
+            grid-template-columns: 1fr;
+        }
+
+        .seo-columns--worksheet .seo-rail ul,
+        .seo-columns--command .seo-rail ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .seo-columns--command {
+            grid-template-columns: 1fr;
+        }
+
+        .seo-columns--command .seo-copy {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .seo-columns--command .seo-copy p {
+            margin: 0;
+            padding: 18px;
+            border-radius: calc(var(--card-radius) - 2px);
+            border: var(--outline-width) solid var(--surface-border);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        body.blueprint-campaign-mosaic .page-shell,
+        body.blueprint-magazine-fold .page-shell {
+            max-width: 1380px;
+        }
+
+        @media (max-width: 1100px) {
+            .hero,
+            .hero--signal-bento .hero-main,
+            .hero--atlas-report .hero-main,
+            body.hero-command .hero,
+            body.hero-tool-first .hero,
+            body.hero-poster .hero,
+            body.layout-editorial .hero,
+            .feature-grid,
+            .faq-grid,
+            .proof-grid,
+            .seo-columns,
+            .result-grid,
+            .contrast-preview,
+            .hero-belt,
+            .hero--worksheet-flow,
+            .shell-paired,
+            .shell-dossier,
+            .shell-matrix,
+            .seo-columns--command .seo-copy {
+                grid-template-columns: 1fr;
+            }
+
+            .shell-mosaic {
+                grid-template-columns: 1fr;
+            }
+
+            .shell-mosaic .section-stage,
+            .shell-mosaic .section-stage:nth-child(1),
+            .shell-mosaic .section-stage:nth-child(2),
+            .shell-mosaic .section-stage:nth-child(n+3) {
+                grid-column: auto;
+            }
+
+            .shell-cascade .section-stage .section,
+            .shell-fold .section-stage .section {
+                max-width: none;
+                margin-left: 0;
+                transform: none;
+            }
+
+            .feature-grid--essay .feature-card,
+            .proof-grid--ledger .proof-card,
+            .faq-grid--list .faq-card {
+                grid-template-columns: 1fr;
+            }
+
+            .shell-dossier__aside .section {
+                position: static;
+            }
+
+            body.layout-showcase .tool-panel,
+            body.layout-editorial .tool-panel,
+            body.layout-asymmetric .hero-copy,
+            body.layout-asymmetric .tool-panel,
+            body.page-console .hero-copy,
+            body.page-console .tool-panel,
+            body.page-editorial .hero-copy,
+            body.page-editorial .tool-panel,
+            body.page-showcase .hero-copy,
+            body.page-showcase .tool-panel,
+            body.hero-poster .hero-copy,
+            body.hero-poster .tool-panel {
+                transform: none;
+                margin: 0;
+            }
+
+            body.page-console .hero,
+            body.page-editorial .hero,
+            body.page-showcase .hero {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .hero--signal-bento .hero-main,
+            .hero--atlas-report .hero-main {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            body.page-console .hero-copy,
+            body.page-editorial .hero-copy,
+            body.page-showcase .hero-copy {
+                order: 1;
+            }
+
+            body.page-console .tool-panel,
+            body.page-editorial .tool-panel,
+            body.page-showcase .tool-panel {
+                order: 2;
+                width: 100%;
+            }
+
+            body.layout-showcase:not(.hero-stacked) .hero-copy,
+            body.layout-showcase .hero-copy,
+            body.hero-tool-first .hero-copy {
+                order: 1;
+            }
+
+            body.layout-showcase:not(.hero-stacked) .tool-panel,
+            body.layout-showcase .tool-panel,
+            body.hero-tool-first .tool-panel {
+                order: 2;
+            }
+
+            body.proof-rail .proof-card {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats,
+            .feature-grid--tiles,
+            .feature-grid--mini-bento,
+            .proof-grid--spotlight,
+            .feature-grid--manifesto,
+            .faq-grid--split {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-copy,
+            .tool-panel,
+            .section {
+                padding: 22px;
+            }
+
+            .result-actions {
+                grid-template-columns: 1fr;
+            }
+
+            .swatch-grid,
+            .profile-grid,
+            .audit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="page-classic direction-worksheet-flow blueprint-worksheet-cascade shell-cascade layout-asymmetric hero-tool-first proof-checklist card-glass button-gradient decor-ribbons tool-dense headline-xlong" data-site-slug="outil-de-planification-de-randonnees-eco-respon-8a99fe7f" data-runtime-mode="waste_dashboard">
+    <div class="page-shell">
+        
+    <section class="hero hero--worksheet-flow">
+        <div class="panel tool-panel tool-panel--sheet">
+    <h2 class="tool-panel__title">Un parcours guidé pour obtenir un résultat directement exploitable.</h2>
+    <p class="tool-panel__intro">Votre résultat apparaît ici après interaction.</p>
+
+    <form id="tool-form" onsubmit="event.preventDefault(); evaluateTool();">
+        <div class="field-grid">
+            
+            <label>
+                <span>Déchets mensuels (kg)</span>
+                
+                <input id="waste_volume" type="number" placeholder="2400">
+                
+            </label>
+            
+            <label>
+                <span>Part recyclée (%)</span>
+                
+                <input id="recycling_share" type="number" placeholder="48">
+                
+            </label>
+            
+            <label>
+                <span>Collectes par mois</span>
+                
+                <input id="pickups_per_month" type="number" placeholder="6">
+                
+            </label>
+            
+        </div>
+
+        <button class="button" id="tool-submit" type="submit">Calculer le tableau de bord</button>
+    </form>
+
+    <div class="result-card" id="tool-result">
+        <span>Tableau de bord</span>
+        <strong id="result-headline" data-result-headline>0</strong>
+        <p id="result-detail" data-result-detail>Votre résultat apparaît ici après interaction.</p>
+        <div class="result-preview" id="result-preview" hidden></div>
+        <div class="result-rich" id="result-rich" hidden></div>
+        <div class="result-actions">
+            <a id="result-primary-action" href="#seo">Voir la suite</a>
+            <a id="result-secondary-action" href="#faq">Consulter la FAQ</a>
+        </div>
+    </div>
+</div>
+        <div class="panel hero-copy hero-copy--worksheet">
+            <div>
+                <div class="eyebrow">Interface Research</div>
+                <h1>Outil de Planification de Randonnées Éco-responsables en France</h1>
+                <p class="lead">Organisez vos itinéraires de randonnée en privilégiant les sentiers balisés, les zones protégées et les pratiques respectueuses de l&#39;environnement. Découvrez la France durablement.</p>
+            </div>
+            <div class="hero-note">Un parcours guidé pour obtenir un résultat directement exploitable.</div>
+            <div class="hero-stats ">
+    
+    <article class="hero-stat">
+        <strong>Worksheet Flow</strong>
+        <span>Cadence</span>
+    </article>
+    
+    <article class="hero-stat">
+        <strong>3</strong>
+        <span>Entrées</span>
+    </article>
+    
+    <article class="hero-stat">
+        <strong>Tableau de bord</strong>
+        <span>Sortie</span>
+    </article>
+    
+</div>
+            <div class="trust-row">
+    
+    <div class="trust-chip">Worksheet Flow</div>
+    
+    <div class="trust-chip">Voir la suite</div>
+    
+    <div class="trust-chip">Tableau de bord</div>
+    
+    <div class="trust-chip">Utilitaire immédiat</div>
+    
+    <div class="trust-chip">Structure SEO claire</div>
+    
+</div>
+        </div>
+    </section>
+    
+        
+    <div class="sections-shell shell-cascade">
+        
+        <div class="section-stage">
+            
+        <section class="panel section section--proof" id="proof">
+    <div class="section-kicker">Worksheet flow</div>
+    <h2>Ce que vous récupérez</h2>
+    <p class="section-intro">Un parcours guidé pour obtenir un résultat directement exploitable.</p>
+    <div class="proof-grid proof-grid--checkpoints">
+        
+        <article class="proof-card">
+            <h3>Repère initial</h3>
+            <p>Aperture Lab cadre la page avec une lecture nette qui rassure dès le premier écran.</p>
+        </article>
+        
+        <article class="proof-card">
+            <h3>Étape validée</h3>
+            <p>Tool First Rail met le résultat en avant avec une hiérarchie simple et directement exploitable.</p>
+        </article>
+        
+        <article class="proof-card">
+            <h3>Suite concrète</h3>
+            <p>Le CTA mène vers une action immédiate, sans exposer l&#39;utilisateur à un écran inutile.</p>
+        </article>
+        
+    </div>
+</section>
+    
+        </div>
+        
+        <div class="section-stage">
+            
+        <section class="panel section section--features" id="features">
+    <div class="section-kicker">Worksheet flow</div>
+    <h2>Ce que vous renseignez</h2>
+    <p class="section-intro">Organisez vos itinéraires de randonnée en privilégiant les sentiers balisés, les zones protégées et les pratiques respectueuses de l&#39;environnement. Découvrez la France durablement.</p>
+    <div class="feature-grid feature-grid--steps">
+        
+        <article class="feature-card">
+            <h3>Saisie de départ</h3>
+            <p>L&#39;outil isole un signal nette à partir d&#39;un sujet concret comme Outil de Planification de Randonnées Éco-responsables en France.</p>
+        </article>
+        
+        <article class="feature-card">
+            <h3>Traitement guidé</h3>
+            <p>Le parcours Tool First Rail garde l&#39;interface simple même quand l&#39;entrée est plus dense.</p>
+        </article>
+        
+        <article class="feature-card">
+            <h3>Sortie exploitable</h3>
+            <p>La prochaine action devient immédiate grâce à une sortie pensée pour une décision rapide.</p>
+        </article>
+        
+    </div>
+</section>
+    
+        </div>
+        
+        <div class="section-stage">
+            
+        <section class="panel section" id="seo">
+    <div class="section-kicker">Worksheet flow</div>
+    <h2>Mode d&#39;emploi</h2>
+    <p class="section-intro">Le mode d&#39;emploi, le ciblage et la logique de parcours.</p>
+    <div class="seo-columns seo-columns--worksheet">
+        <div class="seo-copy">
+            
+            <p>Cette page capte une intention forte autour de Outil de Planification de Randonnées Éco-responsables en France et la transforme en action utile pour un public situé sur France.</p>
+            
+            <p>Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.</p>
+            
+            <p>Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO.</p>
+            
+        </div>
+        <aside class="seo-rail">
+            <strong>Blueprint de la page</strong>
+            <ul>
+                <li>Archétype: tool</li>
+                <li>Mise en page: Tool First Rail</li>
+                <li>Thème visuel: Aperture Lab</li>
+                <li>Action visée: Voir la suite</li>
+            </ul>
+        </aside>
+    </div>
+</section>
+    
+        </div>
+        
+        <div class="section-stage">
+            
+        <section class="panel section" id="faq">
+    <div class="section-kicker">Worksheet flow</div>
+    <h2>Notes de parcours</h2>
+    <p class="section-intro">Des notes utiles pour avancer sans friction.</p>
+    <div class="faq-grid faq-grid--notes">
+        
+        <article class="faq-card">
+            <h3>Pourquoi utiliser cet outil pour Outil de Planification de Randonnées Éco-responsables en France ?</h3>
+            <p>Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France.</p>
+        </article>
+        
+        <article class="faq-card">
+            <h3>Le résultat est-il immédiat ?</h3>
+            <p>Oui. L&#39;interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction.</p>
+        </article>
+        
+        <article class="faq-card">
+            <h3>Cette page est-elle adaptée au SEO ?</h3>
+            <p>Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l&#39;expérience.</p>
+        </article>
+        
+    </div>
+</section>
+    
+        </div>
+        
+    </div>
+    
+
+        <footer>
+            Service en ligne disponible sur mobile et desktop, sans inscription.
+        </footer>
+    </div>
+
+    <script>
+        const fieldConfig = [{"id": "waste_volume", "label": "D\u00e9chets mensuels (kg)", "type": "number", "placeholder": "2400", "weight": 1.0}, {"id": "recycling_share", "label": "Part recycl\u00e9e (%)", "type": "number", "placeholder": "48", "weight": 0.65}, {"id": "pickups_per_month", "label": "Collectes par mois", "type": "number", "placeholder": "6", "weight": 0.35}];
+const archetypeMode = "tool";
+const resultUnit = "";
+const numberLocale = "fr-FR";
+const siteTitle = "Outil de Planification de Randonn\u00e9es \u00c9co-responsables en France";
+const siteSlug = "outil-de-planification-de-randonnees-eco-respon-8a99fe7f";
+const runtimeMode = "waste_dashboard";
+const siteMarket = "France";
+const siteCountry = "FR";
+const calculatorDetail = "Projection g\u00e9n\u00e9r\u00e9e instantan\u00e9ment pour guider la prochaine action.";
+const generatorHeadline = "G\u00e9n\u00e9rateur Intelligent en Ligne";
+const generatorDetail = "Version rapide g\u00e9n\u00e9r\u00e9e \u00e0 partir des champs saisis.";
+const toolHeadline = "Outil Intelligent en Ligne";
+const toolDetail = "Synth\u00e8se imm\u00e9diate \u00e0 partir des informations saisies.";
+const qrHeadline = "QR code pr\u00eat";
+const qrDetail = "Le QR code a \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9. Ouvrez-le ou t\u00e9l\u00e9chargez-le en PNG.";
+const qrMissingInput = "Saisissez un texte, un lien ou une donn\u00e9e \u00e0 encoder pour g\u00e9n\u00e9rer le QR code.";
+const qrDownloadLabel = "T\u00e9l\u00e9charger le QR";
+const qrOpenLabel = "Ouvrir le QR";
+const qrAltText = "QR code g\u00e9n\u00e9r\u00e9";
+const qrTypeLabel = "Type encod\u00e9";
+const qrValueLabel = "Contenu encod\u00e9";
+const qrDefaultType = "Texte";
+const qrPlaceholderMap = {"text": "Texte libre ou phrase courte", "url": "https://exemple.fr/page", "wifi": "SSID | mot de passe | WPA", "phone": "+33 6 12 34 56 78", "email": "contact@exemple.fr | Objet | Message", "geo": "48.8566,2.3522"};
+const qrTypeNames = {"text": "Texte", "url": "Lien", "wifi": "Wi-Fi", "phone": "T\u00e9l\u00e9phone", "email": "Email", "geo": "G\u00e9olocalisation"};
+const currentLanguage = (document.documentElement.lang || "en").toLowerCase();
+
+const resultCard = document.getElementById("tool-result");
+const resultPreview = document.getElementById("result-preview");
+const resultRich = document.getElementById("result-rich");
+const resultPrimaryAction = document.getElementById("result-primary-action");
+const resultSecondaryAction = document.getElementById("result-secondary-action");
+const defaultPrimaryLabel = resultPrimaryAction ? resultPrimaryAction.textContent : "";
+const defaultPrimaryHref = resultPrimaryAction ? (resultPrimaryAction.getAttribute("href") || "#seo") : "#seo";
+const defaultSecondaryLabel = resultSecondaryAction ? resultSecondaryAction.textContent : "";
+const defaultSecondaryHref = resultSecondaryAction ? (resultSecondaryAction.getAttribute("href") || "#faq") : "#faq";
+
+function numericValue(raw) {
+  const value = Number(String(raw).replace(",", "."));
+  return Number.isFinite(value) ? value : 0;
+}
+
+function textValue(raw) {
+  return String(raw || "").trim();
+}
+
+function escapeHtml(raw) {
+  return String(raw || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
+
+function hashString(raw) {
+  let hash = 0;
+  const value = String(raw || "");
+  for (let index = 0; index < value.length; index += 1) {
+    hash = ((hash << 5) - hash + value.charCodeAt(index)) | 0;
+  }
+  return Math.abs(hash);
+}
+
+function splitTokens(raw) {
+  return textValue(raw)
+    .split(/[\n,;|/]+/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function titleCase(raw) {
+  return textValue(raw)
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+function normalizeHexColor(raw) {
+  const base = textValue(raw).replace(/^#/, "");
+  if (/^[0-9a-fA-F]{3}$/.test(base)) {
+    return base.split("").map((char) => char + char).join("").toUpperCase();
+  }
+  if (/^[0-9a-fA-F]{6}$/.test(base)) {
+    return base.toUpperCase();
+  }
+  return "000000";
+}
+
+function buildResultLines(values) {
+  return fieldConfig
+    .map((field) => {
+      const node = document.getElementById(field.id);
+      const value = field.type === "select" && node && node.selectedOptions.length
+        ? textValue(node.selectedOptions[0].dataset.label || node.selectedOptions[0].textContent)
+        : textValue(values[field.id]);
+      return value ? `${field.label}: ${value}` : "";
+    })
+    .filter(Boolean);
+}
+
+function isQrTool() {
+  const ids = fieldConfig.map((field) => String(field.id || ""));
+  const labels = fieldConfig.map((field) => String(field.label || ""));
+  const haystack = [siteTitle, siteSlug, ...ids, ...labels].join(" ").toLowerCase();
+  return /(?:^|[^a-z])qr(?:[^a-z]|$)|qr-code|qrcode/.test(haystack) || ids.includes("qr_color");
+}
+
+function clearResultPreview() {
+  if (!resultPreview) return;
+  resultPreview.hidden = true;
+  resultPreview.innerHTML = "";
+}
+
+function clearRichResult() {
+  if (!resultRich) return;
+  resultRich.hidden = true;
+  resultRich.innerHTML = "";
+  if (resultCard) {
+    delete resultCard.dataset.outputKind;
+    delete resultCard.dataset.outputCount;
+  }
+}
+
+function setAction(node, label, href, options = {}) {
+  if (!node) return;
+  node.textContent = label;
+  node.href = href;
+  if (options.downloadName) {
+    node.setAttribute("download", options.downloadName);
+  } else {
+    node.removeAttribute("download");
+  }
+  node.dataset.downloadUrl = options.downloadUrl || "";
+  node.dataset.downloadName = options.downloadName || "";
+  if (options.external) {
+    node.target = "_blank";
+    node.removeAttribute("rel");
+  } else {
+    node.removeAttribute("target");
+    node.removeAttribute("rel");
+  }
+}
+
+function resetActions() {
+  setAction(resultPrimaryAction, defaultPrimaryLabel, defaultPrimaryHref);
+  setAction(resultSecondaryAction, defaultSecondaryLabel, defaultSecondaryHref);
+}
+
+async function triggerDownload(url, filename) {
+  try {
+    const response = await fetch(url, { mode: "cors" });
+    if (!response.ok) {
+      throw new Error(`Download request failed with ${response.status}`);
+    }
+    const blob = await response.blob();
+    const objectUrl = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = objectUrl;
+    link.download = filename || "download";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(objectUrl), 1500);
+  } catch (error) {
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+}
+
+function bindActionDownloads() {
+  [resultPrimaryAction, resultSecondaryAction].forEach((node) => {
+    if (!node || node.dataset.downloadBound === "true") return;
+    node.dataset.downloadBound = "true";
+    node.addEventListener("click", async (event) => {
+      const downloadUrl = node.dataset.downloadUrl;
+      if (!downloadUrl) return;
+      event.preventDefault();
+      await triggerDownload(downloadUrl, node.dataset.downloadName || "download");
+    });
+  });
+}
+
+function showResult(headline, detail) {
+  if (!resultCard) return;
+  resultCard.querySelector("[data-result-headline]").textContent = headline;
+  resultCard.querySelector("[data-result-detail]").textContent = detail;
+  resultCard.classList.add("is-visible");
+}
+
+function showRichContent(kind, items, html) {
+  if (!resultCard) return;
+  resultCard.dataset.outputKind = kind || "";
+  resultCard.dataset.outputCount = String(items || 0);
+  if (!resultRich) return;
+  if (!html) {
+    resultRich.hidden = true;
+    resultRich.innerHTML = "";
+    return;
+  }
+  resultRich.hidden = false;
+  resultRich.innerHTML = html;
+}
+
+function normalizeQrType(rawType) {
+  const value = textValue(rawType).toLowerCase();
+  if (!value) return "text";
+  if (value.includes("wifi") || value.includes("wi-fi")) return "wifi";
+  if (value.includes("mail")) return "email";
+  if (value.includes("phone") || value.includes("tel") || value.includes("telefon") || value.includes("télé")) return "phone";
+  if (value.includes("geo") || value.includes("gps") || value.includes("coord")) return "geo";
+  if (value.includes("url") || value.includes("link") || value.includes("lien") || value.includes("site")) return "url";
+  return "text";
+}
+
+function qrTypeLabelFor(typeKey, fallbackLabel) {
+  return textValue(fallbackLabel) || qrTypeNames[typeKey] || qrDefaultType;
+}
+
+function normalizeUrlValue(raw) {
+  const value = textValue(raw);
+  if (!value) return "";
+  return /^[a-z]+:/i.test(value) ? value : `https://${value}`;
+}
+
+function escapeWifiValue(raw) {
+  return textValue(raw).replace(/([\\;,:"])/g, "\\$1");
+}
+
+function updateQrInputPlaceholder() {
+  if (!isQrTool()) return;
+  const typeField = document.getElementById("content_type");
+  const contentField = document.getElementById("content_input");
+  if (!contentField) return;
+  const typeKey = normalizeQrType(typeField ? typeField.value : "");
+  contentField.placeholder = qrPlaceholderMap[typeKey] || qrPlaceholderMap.text || contentField.placeholder;
+}
+
+function wireQrInputs() {
+  if (!isQrTool()) return;
+  const typeField = document.getElementById("content_type");
+  if (!typeField) return;
+  typeField.addEventListener("change", updateQrInputPlaceholder);
+  updateQrInputPlaceholder();
+}
+
+function prepareTextDownload(node, label, text, filename, mime = "text/plain;charset=utf-8") {
+  if (!node) return;
+  const blob = new Blob([text], { type: mime });
+  const objectUrl = URL.createObjectURL(blob);
+  setAction(node, label, objectUrl, { downloadName: filename });
+}
+
+function renderMetricGrid(items) {
+  return `<div class="result-grid">${items
+    .map((item) => `<article class="result-metric"><strong>${escapeHtml(item.value)}</strong><span>${escapeHtml(item.label)}</span></article>`)
+    .join("")}</div>`;
+}
+
+function renderBulletList(items, className = "result-list") {
+  return `<ul class="${className}">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+}
+
+function buildStructuredCopy(values) {
+  const lines = buildResultLines(values);
+  const title = titleCase(values.goal || values.subject || values.primary || siteTitle);
+  const opening = textValue(values.name || values.company_name || values.company || values.client || siteMarket || "Client");
+  return [
+    title,
+    "",
+    `${opening},`,
+    "",
+    lines.length ? lines.join("\n") : textValue(values.details || values.context || values.goal),
+    "",
+    currentLanguage === "fr" ? "Étapes suivantes :" : "Next steps:",
+    currentLanguage === "fr"
+      ? "- vérifier les informations clés\n- adapter le ton final\n- envoyer ou intégrer le contenu"
+      : "- confirm the key details\n- adapt the final tone\n- send or reuse the output",
+  ].join("\n");
+}
+
+function hexToRgb(hex) {
+  const normalized = normalizeHexColor(hex);
+  return {
+    r: parseInt(normalized.slice(0, 2), 16),
+    g: parseInt(normalized.slice(2, 4), 16),
+    b: parseInt(normalized.slice(4, 6), 16),
+  };
+}
+
+function rgbToHex(r, g, b) {
+  const parts = [r, g, b].map((value) => clamp(Math.round(value), 0, 255).toString(16).padStart(2, "0"));
+  return `#${parts.join("")}`.toUpperCase();
+}
+
+function rgbToHsl(r, g, b) {
+  const red = r / 255;
+  const green = g / 255;
+  const blue = b / 255;
+  const max = Math.max(red, green, blue);
+  const min = Math.min(red, green, blue);
+  let hue = 0;
+  let saturation = 0;
+  const lightness = (max + min) / 2;
+  const delta = max - min;
+  if (delta !== 0) {
+    saturation = lightness > 0.5 ? delta / (2 - max - min) : delta / (max + min);
+    switch (max) {
+      case red:
+        hue = (green - blue) / delta + (green < blue ? 6 : 0);
+        break;
+      case green:
+        hue = (blue - red) / delta + 2;
+        break;
+      default:
+        hue = (red - green) / delta + 4;
+    }
+    hue /= 6;
+  }
+  return { h: hue * 360, s: saturation * 100, l: lightness * 100 };
+}
+
+function hslToRgb(h, s, l) {
+  const hue = ((h % 360) + 360) % 360 / 360;
+  const saturation = clamp(s, 0, 100) / 100;
+  const lightness = clamp(l, 0, 100) / 100;
+  if (saturation === 0) {
+    const value = lightness * 255;
+    return { r: value, g: value, b: value };
+  }
+  const hueToRgb = (p, q, t) => {
+    let temp = t;
+    if (temp < 0) temp += 1;
+    if (temp > 1) temp -= 1;
+    if (temp < 1 / 6) return p + (q - p) * 6 * temp;
+    if (temp < 1 / 2) return q;
+    if (temp < 2 / 3) return p + (q - p) * (2 / 3 - temp) * 6;
+    return p;
+  };
+  const q = lightness < 0.5 ? lightness * (1 + saturation) : lightness + saturation - lightness * saturation;
+  const p = 2 * lightness - q;
+  return {
+    r: hueToRgb(p, q, hue + 1 / 3) * 255,
+    g: hueToRgb(p, q, hue) * 255,
+    b: hueToRgb(p, q, hue - 1 / 3) * 255,
+  };
+}
+
+function hslToHex(h, s, l) {
+  const rgb = hslToRgb(h, s, l);
+  return rgbToHex(rgb.r, rgb.g, rgb.b);
+}
+
+function generatePalette(values) {
+  const base = textValue(values.base_color || values.primary || values.color || "");
+  const style = textValue(values.palette_style || values.context || "chrome-pop").toLowerCase();
+  const intensity = clamp(numericValue(values.vibrancy || values.scope || "6"), 1, 10);
+  const fallbackHex = rgbToHex(100 + hashString(base || style) % 120, 60 + hashString(style) % 140, 120 + hashString(siteTitle) % 100);
+  const source = /^#?[0-9a-f](3, 6)$/i.test(base) ? `#${normalizeHexColor(base)}` : fallbackHex;
+  const hsl = rgbToHsl(...Object.values(hexToRgb(source)));
+  const styleOffsets = {
+    "chrome-pop": [0, 18, -26, 46, -58],
+    "digital-candy": [0, 24, 64, -18, 138],
+    "acid-pastel": [0, 14, 48, -32, 92],
+    "night-neon": [0, 36, -42, 96, 154],
+  };
+  const offsets = styleOffsets[style] || styleOffsets["chrome-pop"];
+  const colors = offsets.map((offset, index) => {
+    const saturation = clamp(hsl.s + intensity * (index === 0 ? 0.4 : 1.4) - index * 4, 34, 96);
+    const lightness = clamp(hsl.l + (index % 2 === 0 ? 10 : -12) + intensity * (index === 2 ? -1.2 : 0.5), 18, 84);
+    return hslToHex(hsl.h + offset, saturation, lightness);
+  });
+  return colors;
+}
+
+function renderPaletteSwatches(colors) {
+  return `<div class="swatch-grid">${colors
+    .map((color, index) => `<article class="swatch-card"><span class="swatch-chip" style="background:${color}"></span><strong>${index === 0 ? "Primary" : `Tone ${index + 1}`}</strong><code>${escapeHtml(color)}</code></article>`)
+    .join("")}</div>`;
+}
+
+function generateSlogans(values) {
+  const keywords = splitTokens(values.keywords || values.primary || values.goal || "");
+  const sector = textValue(values.sector || values.context || siteMarket || "");
+  const tone = textValue(values.tone || values.scope || "premium").toLowerCase();
+  const keywordA = keywords[0] || (currentLanguage === "fr" ? "impact" : "impact");
+  const keywordB = keywords[1] || (currentLanguage === "fr" ? "avenir" : "future");
+  const keywordC = keywords[2] || (currentLanguage === "fr" ? "confiance" : "trust");
+  const templates = currentLanguage === "fr"
+    ? [
+        `${keywordA} plus clair pour ${sector || "votre marque"}`,
+        `${keywordB} commence par un choix net`,
+        `${keywordA}, ${keywordB}, sans détour`,
+        `${sector || "Votre secteur"}, version ${keywordC}`,
+        `Faites grandir ${sector || "la marque"} avec plus de ${keywordA}`,
+        `${keywordB} qui se prouve, ${keywordC} qui reste`,
+        `Le bon signal pour une marque plus ${keywordA}`,
+      ]
+    : [
+        `${keywordA} made clearer for ${sector || "your brand"}`,
+        `${keywordB} starts with a sharper choice`,
+        `${keywordA}, ${keywordB}, no wasted words`,
+        `${sector || "Your sector"}, built around ${keywordC}`,
+        `Grow ${sector || "the brand"} with more ${keywordA}`,
+        `${keywordB} that proves itself, ${keywordC} that stays`,
+        `The right signal for a more ${keywordA} brand`,
+      ];
+  const orderSeed = hashString(`${keywordA}-${keywordB}-${tone}-${sector}`);
+  return templates
+    .map((item, index) => [item, (orderSeed + index * 17) % 97])
+    .sort((left, right) => left[1] - right[1])
+    .map((item) => item[0])
+    .filter((item, index, list) => list.indexOf(item) === index)
+    .slice(0, 6);
+}
+
+function generateProfiles(values) {
+  const geo = textValue(values.geo || values.city || values.region || siteCountry || "France");
+  const quantity = clamp(Math.round(numericValue(values.quantity || "4") || 4), 1, 8);
+  const typeLabel = textValue(values.profile_type || values.context || "customer");
+  const firstNames = ["Camille", "Lina", "Nora", "Jules", "Hugo", "Mila", "Adam", "Chloe", "Noah", "Lou"];
+  const lastNames = ["Martin", "Bernard", "Roux", "Garcia", "Lefevre", "Petit", "Morel", "Fournier", "Mercier", "Chevalier"];
+  const streets = ["rue des Tilleuls", "avenue Victor-Hugo", "boulevard Voltaire", "rue Nationale", "rue des Lilas", "allée des Forges"];
+  const cities = geo ? [geo, "Paris", "Lyon", "Lille", "Nantes", "Bordeaux"] : ["Paris", "Lyon", "Lille", "Nantes"];
+  const profiles = [];
+  for (let index = 0; index < quantity; index += 1) {
+    const seed = hashString(`${geo}-${typeLabel}-${siteSlug}-${index}`);
+    const first = firstNames[seed % firstNames.length];
+    const last = lastNames[(seed + 3) % lastNames.length];
+    const city = cities[(seed + 5) % cities.length];
+    const street = streets[(seed + 7) % streets.length];
+    const postal = String(10000 + (seed % 85000)).slice(0, 5);
+    const birthYear = 1978 + (seed % 24);
+    const birthMonth = String((seed % 12) + 1).padStart(2, "0");
+    const birthDay = String((seed % 27) + 1).padStart(2, "0");
+    const email = `${first.toLowerCase()}.${last.toLowerCase()}${index + 1}@example.test`;
+    const phone = `+33 6 ${String((seed % 90) + 10)} ${String((seed % 90) + 10)} ${String((seed % 90) + 10)} ${String((seed % 90) + 10)}`;
+    profiles.push({
+      fullName: `${first} ${last}`,
+      email,
+      phone,
+      address: `${12 + (seed % 180)} ${street}, ${postal} ${city}`,
+      birthDate: `${birthDay}/${birthMonth}/${birthYear}`,
+      typeLabel,
+    });
+  }
+  return profiles;
+}
+
+function renderProfiles(profiles) {
+  return `<div class="profile-grid">${profiles
+    .map((profile) => `<article class="profile-card"><strong>${escapeHtml(profile.fullName)}</strong><span>${escapeHtml(profile.typeLabel)}</span><p>${escapeHtml(profile.address)}</p><p>${escapeHtml(profile.phone)}</p><p>${escapeHtml(profile.email)}</p><p>${escapeHtml(profile.birthDate)}</p></article>`)
+    .join("")}</div>`;
+}
+
+function buildDocumentDraft(values) {
+  const subject = titleCase(values.document_type || values.goal || values.primary || siteTitle);
+  const owner = textValue(values.company_name || values.name || values.company || "Studio Horizon");
+  const context = textValue(values.details || values.context || values.secondary || "");
+  const clauses = currentLanguage === "fr"
+    ? [
+        `Objet : formaliser ${subject.toLowerCase()} pour ${owner}.`,
+        `Périmètre : ${context || "définir les responsabilités, livrables et délais applicables."}`,
+        "Validation : confirmer les informations, ajuster les mentions sensibles et faire relire la version finale.",
+      ]
+    : [
+        `Purpose: formalize ${subject.toLowerCase()} for ${owner}.`,
+        `Scope: ${context || "define responsibilities, deliverables, and timing expectations."}`,
+        "Validation: confirm the details, adjust sensitive clauses, and review the final version.",
+      ];
+  return {
+    headline: subject,
+    clauses,
+    text: [subject, "", ...clauses].join("\n"),
+  };
+}
+
+function buildSeoAudit(values) {
+  const url = normalizeUrlValue(values.website_url || values.url || values.primary || "");
+  const title = textValue(values.page_title || values.title || "");
+  const keyword = textValue(values.focus_keyword || values.keyword || values.context || "");
+  let score = 100;
+  const checks = [];
+  const parsedUrl = url ? new URL(url) : null;
+  const path = parsedUrl ? parsedUrl.pathname || "/" : "/";
+  const slugDepth = path.split("/").filter(Boolean).length;
+  const httpsOk = Boolean(parsedUrl && parsedUrl.protocol === "https:");
+  checks.push({ label: currentLanguage === "fr" ? "HTTPS" : "HTTPS", ok: httpsOk, detail: httpsOk ? "ok" : "upgrade to HTTPS" });
+  if (!httpsOk) score -= 18;
+  const titleOk = title.length >= 30 && title.length <= 62;
+  checks.push({ label: currentLanguage === "fr" ? "Title" : "Title", ok: titleOk, detail: title || (currentLanguage === "fr" ? "titre absent" : "missing title") });
+  if (!titleOk) score -= 16;
+  const keywordOk = !keyword || title.toLowerCase().includes(keyword.toLowerCase());
+  checks.push({ label: currentLanguage === "fr" ? "Mot-clé" : "Keyword", ok: keywordOk, detail: keyword || (currentLanguage === "fr" ? "non défini" : "not set") });
+  if (!keywordOk) score -= 12;
+  const cleanPath = !/[A-Z_]/.test(path) && slugDepth <= 3;
+  checks.push({ label: currentLanguage === "fr" ? "Structure URL" : "URL structure", ok: cleanPath, detail: path || "/" });
+  if (!cleanPath) score -= 10;
+  const queryPenalty = parsedUrl && parsedUrl.search ? 8 : 0;
+  if (queryPenalty) {
+    checks.push({ label: currentLanguage === "fr" ? "Paramètres" : "Parameters", ok: false, detail: parsedUrl.search });
+    score -= queryPenalty;
+  }
+  score = clamp(score, 28, 100);
+  return {
+    score,
+    checks,
+    metrics: [
+      { value: `${score}/100`, label: currentLanguage === "fr" ? "Score SEO" : "SEO score" },
+      { value: httpsOk ? "HTTPS" : "HTTP", label: currentLanguage === "fr" ? "Sécurité" : "Security" },
+      { value: `${title.length || 0}`, label: currentLanguage === "fr" ? "Longueur title" : "Title length" },
+    ],
+  };
+}
+
+function buildWasteDashboard(values) {
+  const waste = Math.max(numericValue(values.waste_volume || values.amount || "0"), 0);
+  const recycling = clamp(numericValue(values.recycling_share || values.scope || "0"), 0, 100);
+  const pickups = clamp(Math.max(numericValue(values.pickups_per_month || values.duration || "4"), 1), 1, 30);
+  const recovered = waste * (recycling / 100);
+  const landfill = Math.max(waste - recovered, 0);
+  const pressure = Math.round((waste / pickups) * 10) / 10;
+  return {
+    diversion: Math.round(recycling),
+    metrics: [
+      { value: `${Math.round(recovered)} kg`, label: currentLanguage === "fr" ? "Valorisés" : "Recovered" },
+      { value: `${Math.round(landfill)} kg`, label: currentLanguage === "fr" ? "Résiduels" : "Residual" },
+      { value: `${pressure} kg`, label: currentLanguage === "fr" ? "Charge par collecte" : "Load per pickup" },
+    ],
+    actions: currentLanguage === "fr"
+      ? [
+          "Augmenter la séparation des flux les plus lourds.",
+          "Réduire les pics de collecte grâce à une meilleure cadence interne.",
+          "Identifier les matières à plus forte valeur de réemploi.",
+        ]
+      : [
+          "Increase sorting on the heaviest waste streams.",
+          "Reduce collection peaks with a better internal cadence.",
+          "Identify materials with stronger reuse value.",
+        ],
+  };
+}
+
+function luminanceFromHex(hex) {
+  const rgb = Object.values(hexToRgb(hex)).map((value) => {
+    const normalized = value / 255;
+    return normalized <= 0.03928 ? normalized / 12.92 : ((normalized + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2];
+}
+
+function buildContrastAudit(values) {
+  const foreground = `#${normalizeHexColor(values.foreground || values.primary || "#111111")}`;
+  const background = `#${normalizeHexColor(values.background || values.context || "#ffffff")}`;
+  const size = textValue(values.text_size || "body").toLowerCase();
+  const light = Math.max(luminanceFromHex(foreground), luminanceFromHex(background));
+  const dark = Math.min(luminanceFromHex(foreground), luminanceFromHex(background));
+  const ratio = Math.round((((light + 0.05) / (dark + 0.05)) * 100)) / 100;
+  const aa = ratio >= (size === "large" ? 3 : 4.5);
+  const aaa = ratio >= (size === "large" ? 4.5 : 7);
+  return { ratio, aa, aaa, foreground, background };
+}
+
+function parseYear(raw) {
+  const text = textValue(raw);
+  const match = text.match(/(19|20)\d{2}/);
+  return match ? Number(match[0]) : Math.max(2000, new Date().getFullYear() - 2);
+}
+
+function functionalQaMarker() {
+  let marker = document.getElementById("qa-smoke-result");
+  if (marker) return marker;
+  marker = document.createElement("div");
+  marker.id = "qa-smoke-result";
+  marker.hidden = true;
+  document.body.appendChild(marker);
+  return marker;
+}
+
+function functionalQaSample(field) {
+  if (isQrTool()) {
+    if (field.id === "content_type") return "url";
+    if (field.id === "content_input") return "https://example.com/qa-smoke";
+    if (field.id === "qr_color") return "#111111";
+  }
+  if (field.id === "base_color" || field.id === "foreground") return "#7c3aed";
+  if (field.id === "background") return "#f9fafb";
+  if (field.id === "palette_style") return "chrome-pop";
+  if (field.id === "vibrancy") return "8";
+  if (field.id === "keywords") return "impact, avenir, confiance";
+  if (field.id === "sector") return "mobilite durable";
+  if (field.id === "tone") return "premium";
+  if (field.id === "geo") return "Lyon";
+  if (field.id === "quantity") return "4";
+  if (field.id === "profile_type") return "customer";
+  if (field.id === "website_url") return "https://example.com/offre-eco";
+  if (field.id === "page_title") return "Comparateur assurance auto jeune conducteur";
+  if (field.id === "focus_keyword") return "assurance auto jeune conducteur";
+  if (field.id === "waste_volume") return "2400";
+  if (field.id === "recycling_share") return "48";
+  if (field.id === "pickups_per_month") return "6";
+  if (field.id === "document_type") return "Contrat de prestation";
+  if (field.id === "company_name") return "Studio Horizon";
+  if (field.id === "company") return "Studio Horizon";
+  if (field.id === "name") return "Studio Horizon";
+  if (field.id === "goal") return "confirmation de demande";
+  if (field.id === "details") return "date, montant, reference";
+  if (field.type === "number") {
+    return field.id === "duration" ? "12" : "4800";
+  }
+  if (field.type === "select") {
+    const node = document.getElementById(field.id);
+    if (node && node.options.length > 1) {
+      return node.options[1].value;
+    }
+    if (node && node.options.length) {
+      return node.options[0].value;
+    }
+  }
+  return `QA smoke ${field.label || field.id || "field"}`;
+}
+
+function layoutQaResult() {
+  const viewportWidth = window.innerWidth || document.documentElement.clientWidth || 0;
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+  const scrollOverflow = (document.documentElement.scrollWidth || 0) - viewportWidth;
+  if (scrollOverflow > 8) {
+    return { status: "fail", detail: `Horizontal overflow detected: ${scrollOverflow}px.` };
+  }
+  const hero = document.querySelector(".hero");
+  const heroCopy = document.querySelector(".hero-copy");
+  const toolPanel = document.querySelector(".tool-panel");
+  const title = heroCopy ? heroCopy.querySelector("h1") : null;
+  if (!hero || !heroCopy || !toolPanel) {
+    return { status: "fail", detail: "Hero panels were not found for layout QA." };
+  }
+  const heroStyle = window.getComputedStyle(hero);
+  const copyRect = heroCopy.getBoundingClientRect();
+  const heroRect = hero.getBoundingClientRect();
+  const toolRect = toolPanel.getBoundingClientRect();
+  const body = document.body;
+  if (viewportWidth <= 640) {
+    const topGap = toolRect.top - copyRect.top;
+    const copyBeforeTool = copyRect.top <= toolRect.top - 24;
+    const nearlySameRow = Math.abs(toolRect.top - copyRect.top) < 84;
+    if (!copyBeforeTool || nearlySameRow) {
+      return { status: "fail", detail: `Mobile hero panels did not stack in a stable top-down order (copy top: ${Math.round(copyRect.top)}, tool top: ${Math.round(toolRect.top)}).` };
+    }
+  }
+  if (viewportWidth >= 1100) {
+    const isStackedHero = body.classList.contains("hero-stacked");
+    const isCampaignDirection = body.classList.contains("direction-campaign-slab");
+    const isWorksheetDirection = body.classList.contains("direction-worksheet-flow");
+    if (isStackedHero && toolRect.top < copyRect.top - 12) {
+      return { status: "fail", detail: "Desktop stacked hero placed the tool panel above the hero copy." };
+    }
+    if (title) {
+      const titleRect = title.getBoundingClientRect();
+      const titleStyle = window.getComputedStyle(title);
+      const fontSize = parseFloat(titleStyle.fontSize || "0") || 0;
+      const lineHeightRaw = parseFloat(titleStyle.lineHeight || "0") || 0;
+      void titleRect;
+      void titleStyle;
+      void fontSize;
+      void lineHeightRaw;
+    }
+    const toolFoldThreshold = isCampaignDirection ? viewportHeight * 1.12 : isWorksheetDirection ? viewportHeight * 0.98 : viewportHeight * 0.86;
+    if (toolRect.top > toolFoldThreshold) {
+      return { status: "fail", detail: "Desktop tool panel starts too far below the fold." };
+    }
+    if (body.classList.contains("hero-stacked") && toolRect.top > viewportHeight * 0.9) {
+      return { status: "fail", detail: "Desktop stacked hero pushes the tool panel too far below the fold." };
+    }
+  }
+  return { status: "pass", detail: viewportWidth <= 640 ? "Mobile layout stacked correctly." : "Desktop layout rendered correctly." };
+}
+
+function functionalQaResult() {
+  const layout = layoutQaResult();
+  if (layout.status === "fail") {
+    return { status: "fail", mode: runtimeMode || archetypeMode, detail: layout.detail };
+  }
+  if (!resultCard || !resultCard.classList.contains("is-visible")) {
+    return { status: "fail", mode: archetypeMode, detail: "Result card did not become visible." };
+  }
+  const headline = textValue(resultCard.querySelector("[data-result-headline]")?.textContent);
+  const detail = textValue(resultCard.querySelector("[data-result-detail]")?.textContent);
+  const outputKind = textValue(resultCard.dataset.outputKind);
+  const outputCount = Number(resultCard.dataset.outputCount || "0");
+  if (isQrTool()) {
+    const image = resultPreview ? resultPreview.querySelector("img") : null;
+    if (!image || !/api\.qrserver\.com\/v1\/create-qr-code/i.test(image.src)) {
+      return { status: "fail", mode: "qr", detail: "QR preview image was not rendered." };
+    }
+    if (!resultPrimaryAction || !/api\.qrserver\.com\/v1\/create-qr-code/i.test(resultPrimaryAction.href)) {
+      return { status: "fail", mode: "qr", detail: "QR primary action does not point to the generated PNG." };
+    }
+    if (!detail.includes("example.com/qa-smoke")) {
+      return { status: "fail", mode: "qr", detail: "QR result detail does not echo the encoded content." };
+    }
+    return {
+      status: "pass",
+      mode: "qr",
+      detail: "QR preview rendered and download action is ready.",
+      headline,
+      primary: resultPrimaryAction.href,
+    };
+  }
+  if (runtimeMode === "palette_generator") {
+    if (outputKind !== "palette" || outputCount < 5) {
+      return { status: "fail", mode: runtimeMode, detail: "Palette generator did not render five swatches." };
+    }
+    return { status: "pass", mode: runtimeMode, detail: "Palette generator rendered a usable swatch set.", headline };
+  }
+  if (runtimeMode === "slogan_generator") {
+    if (outputKind !== "slogans" || outputCount < 4) {
+      return { status: "fail", mode: runtimeMode, detail: "Slogan generator did not produce enough variants." };
+    }
+    return { status: "pass", mode: runtimeMode, detail: "Slogan generator produced multiple variants.", headline };
+  }
+  if (runtimeMode === "profile_generator") {
+    if (outputKind !== "profiles" || outputCount < 2) {
+      return { status: "fail", mode: runtimeMode, detail: "Profile generator did not render profile cards." };
+    }
+    return { status: "pass", mode: runtimeMode, detail: "Profile generator rendered realistic profile cards.", headline };
+  }
+  if (runtimeMode === "document_generator") {
+    if (outputKind !== "document" || outputCount < 3) {
+      return { status: "fail", mode: runtimeMode, detail: "Document generator did not render a structured draft." };
+    }
+    return { status: "pass", mode: runtimeMode, detail: "Document generator rendered a structured draft.", headline };
+  }
+  if (runtimeMode === "seo_diagnostic") {
+    if (outputKind !== "audit" || outputCount < 3) {
+      return { status: "fail", mode: runtimeMode, detail: "SEO diagnostic did not render a checklist." };
+    }
+    return { status: "pass", mode: runtimeMode, detail: "SEO diagnostic produced a score and checklist.", headline };
+  }
+  if (runtimeMode === "waste_dashboard") {
+    if (outputKind !== "dashboard" || outputCount < 3) {
+      return { status: "fail", mode: runtimeMode, detail: "Waste dashboard did not render KPI cards." };
+    }
+    return { status: "pass", mode: runtimeMode, detail: "Waste dashboard rendered KPI cards and actions.", headline };
+  }
+  if (runtimeMode === "contrast_checker") {
+    if (outputKind !== "contrast" || !headline) {
+      return { status: "fail", mode: runtimeMode, detail: "Contrast checker did not report a ratio." };
+    }
+    return { status: "pass", mode: runtimeMode, detail: "Contrast checker reported ratio and accessibility status.", headline };
+  }
+  if (archetypeMode === "calculator") {
+    if (!headline || headline === "0") {
+      return { status: "fail", mode: "calculator", detail: "Calculator did not produce a non-zero headline." };
+    }
+    if (outputKind !== "metrics" || outputCount < 2) {
+      return { status: "fail", mode: runtimeMode, detail: "Calculator did not render a usable breakdown." };
+    }
+    return { status: "pass", mode: "calculator", detail: "Calculator produced a computed result.", headline };
+  }
+  if (runtimeMode === "analysis_tool" || runtimeMode === "text_generator") {
+    if (!outputKind || outputCount < 2) {
+      return { status: "fail", mode: runtimeMode, detail: "Tool output did not render structured content." };
+    }
+    return { status: "pass", mode: runtimeMode, detail: "Tool rendered structured output.", headline };
+  }
+  return { status: "pass", mode: archetypeMode, detail: "Tool rendered the smoke-test payload.", headline };
+}
+
+function runFunctionalQaSmoke() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("__qa") !== "functional") return;
+  const marker = functionalQaMarker();
+  const viewport = params.get("__qa_viewport") || (window.innerWidth <= 640 ? "mobile" : "desktop");
+  try {
+    fieldConfig.forEach((field) => {
+      const node = document.getElementById(field.id);
+      if (!node) return;
+      const sample = functionalQaSample(field);
+      if (field.type === "select") {
+        node.value = sample;
+      } else {
+        node.value = sample;
+      }
+    });
+    updateQrInputPlaceholder();
+    evaluateTool();
+    const result = functionalQaResult();
+    marker.dataset.status = result.status || "";
+    marker.dataset.mode = result.mode || "";
+    marker.dataset.detail = result.detail || "";
+    marker.dataset.headline = result.headline || "";
+    marker.dataset.primary = result.primary || "";
+    marker.dataset.viewport = viewport;
+  } catch (error) {
+    marker.dataset.status = "fail";
+    marker.dataset.mode = isQrTool() ? "qr" : archetypeMode;
+    marker.dataset.detail = String(error);
+    marker.dataset.viewport = viewport;
+  }
+}
+
+function inferQrPayload(values) {
+  const rawType = textValue(values.content_type || values.qr_type || values.type);
+  const rawContent = textValue(
+    values.content_input ||
+    values.content ||
+    values.primary ||
+    values.url ||
+    values.wifi_ssid ||
+    values.ssid ||
+    values.email ||
+    values.phone ||
+    values.geo
+  );
+  if (!rawContent) {
+    return { error: qrMissingInput };
+  }
+  const normalizedType = normalizeQrType(rawType || (/^mailto:/i.test(rawContent) ? "email" : ""));
+  const parts = rawContent
+    .split(/\n|\|/)
+    .map((item) => textValue(item))
+    .filter(Boolean);
+  if ((normalizedType === "email" || /@/.test(rawContent)) && !/^mailto:/i.test(rawContent)) {
+    const email = parts[0] || rawContent;
+    if (!email) {
+      return { error: qrMissingInput };
+    }
+    const query = new URLSearchParams();
+    if (parts[1]) query.set("subject", parts[1]);
+    if (parts[2]) query.set("body", parts.slice(2).join(" | "));
+    const suffix = query.toString() ? `?${query.toString()}` : "";
+    return {
+      payload: `mailto:${email}${suffix}`,
+      label: qrTypeLabelFor("email", rawType),
+      preview: email,
+    };
+  }
+  if (normalizedType === "phone" && !/^tel:/i.test(rawContent)) {
+    return {
+      payload: `tel:${rawContent.replace(/\s+/g, "")}`,
+      label: qrTypeLabelFor("phone", rawType),
+      preview: rawContent,
+    };
+  }
+  if (normalizedType === "geo" && !/^geo:/i.test(rawContent)) {
+    return {
+      payload: `geo:${rawContent.replace(/\s+/g, "")}`,
+      label: qrTypeLabelFor("geo", rawType),
+      preview: rawContent,
+    };
+  }
+  if (normalizedType === "wifi" && !/^WIFI:/i.test(rawContent)) {
+    const ssid = parts[0] || "";
+    if (!ssid) {
+      return { error: qrMissingInput };
+    }
+    const password = parts[1] || "";
+    const security = textValue(parts[2] || "WPA").toUpperCase();
+    const hidden = /^(true|1|yes|oui|ja|si)$/i.test(parts[3] || "") ? "true" : "";
+    const hiddenSegment = hidden ? `H:${hidden};` : "";
+    return {
+      payload: `WIFI:T:${escapeWifiValue(security)};S:${escapeWifiValue(ssid)};P:${escapeWifiValue(password)};${hiddenSegment}`,
+      label: qrTypeLabelFor("wifi", rawType),
+      preview: password ? `${ssid} (${security})` : ssid,
+    };
+  }
+  if (normalizedType === "url") {
+    const urlValue = normalizeUrlValue(rawContent);
+    if (!urlValue) {
+      return { error: qrMissingInput };
+    }
+    return {
+      payload: urlValue,
+      label: qrTypeLabelFor("url", rawType),
+      preview: urlValue,
+    };
+  }
+  return {
+    payload: rawContent,
+    label: qrTypeLabelFor("text", rawType),
+    preview: rawContent,
+  };
+}
+
+function buildQrUrl(payload, color) {
+  return `https://api.qrserver.com/v1/create-qr-code/?size=360x360&format=png&ecc=M&margin=12&color=${color}&data=${encodeURIComponent(payload)}`;
+}
+
+function renderQrPreview(qrUrl) {
+  if (!resultPreview) return;
+  resultPreview.hidden = false;
+  resultPreview.innerHTML = "";
+  const image = document.createElement("img");
+  image.src = qrUrl;
+  image.alt = qrAltText;
+  image.loading = "lazy";
+  resultPreview.appendChild(image);
+}
+
+function evaluateTool() {
+  const values = {};
+  fieldConfig.forEach((field) => {
+    const node = document.getElementById(field.id);
+    values[field.id] = node ? node.value : "";
+  });
+
+  clearResultPreview();
+  clearRichResult();
+  resetActions();
+
+  let headline = "";
+  let detail = "";
+  let richHtml = "";
+  let outputKind = "";
+  let outputCount = 0;
+
+  if (isQrTool()) {
+    const qrData = inferQrPayload(values);
+    if (qrData.error) {
+      showResult(qrHeadline, qrData.error);
+      return;
+    }
+    const color = normalizeHexColor(values.qr_color || values.color);
+    const qrUrl = buildQrUrl(qrData.payload, color);
+    headline = qrHeadline;
+    detail = `${qrDetail}\n\n${qrTypeLabel}: ${qrData.label}\n${qrValueLabel}: ${qrData.preview || qrData.payload}`;
+    showResult(headline, detail);
+    renderQrPreview(qrUrl);
+    showRichContent("qr", 1, "");
+    setAction(resultPrimaryAction, qrDownloadLabel, qrUrl, {
+      external: true,
+      downloadUrl: qrUrl,
+      downloadName: `${siteSlug || "qr-code"}.png`,
+    });
+    setAction(resultSecondaryAction, qrOpenLabel, qrUrl, { external: true });
+    return;
+  }
+
+  if (runtimeMode === "palette_generator") {
+    const colors = generatePalette(values);
+    headline = colors[0];
+    detail = currentLanguage === "fr"
+      ? "Palette prête à utiliser, avec variantes tonales et export rapide."
+      : "Palette ready to use, with tonal variants and a quick export.";
+    richHtml = renderPaletteSwatches(colors) + `<pre class="result-code">${escapeHtml(colors.join("\n"))}</pre>`;
+    outputKind = "palette";
+    outputCount = colors.length;
+    prepareTextDownload(resultPrimaryAction, currentLanguage === "fr" ? "Télécharger la palette" : "Download palette", colors.join("\n"), `${siteSlug || "palette"}.txt`);
+  } else if (runtimeMode === "slogan_generator") {
+    const slogans = generateSlogans(values);
+    headline = slogans[0] || generatorHeadline;
+    detail = currentLanguage === "fr"
+      ? "Plusieurs propositions ont été générées avec des angles distincts."
+      : "Multiple variants were generated with distinct angles.";
+    richHtml = renderBulletList(slogans, "result-list slogans-list");
+    outputKind = "slogans";
+    outputCount = slogans.length;
+    prepareTextDownload(resultPrimaryAction, currentLanguage === "fr" ? "Télécharger les slogans" : "Download slogans", slogans.join("\n"), `${siteSlug || "slogans"}.txt`);
+  } else if (runtimeMode === "profile_generator") {
+    const profiles = generateProfiles(values);
+    headline = currentLanguage === "fr" ? `${profiles.length} profils prêts` : `${profiles.length} profiles ready`;
+    detail = currentLanguage === "fr"
+      ? "Chaque profil contient une identité de test cohérente et exploitable."
+      : "Each profile contains a coherent, test-ready identity.";
+    richHtml = renderProfiles(profiles);
+    outputKind = "profiles";
+    outputCount = profiles.length;
+    prepareTextDownload(
+      resultPrimaryAction,
+      currentLanguage === "fr" ? "Télécharger en JSON" : "Download JSON",
+      JSON.stringify(profiles, null, 2),
+      `${siteSlug || "profiles"}.json`,
+      "application/json;charset=utf-8",
+    );
+    prepareTextDownload(
+      resultSecondaryAction,
+      currentLanguage === "fr" ? "Télécharger en CSV" : "Download CSV",
+      ["name,email,phone,address,birthdate,type", ...profiles.map((profile) => `${profile.fullName},${profile.email},${profile.phone},${profile.address},${profile.birthDate},${profile.typeLabel}`)].join("\n"),
+      `${siteSlug || "profiles"}.csv`,
+      "text/csv;charset=utf-8",
+    );
+  } else if (runtimeMode === "document_generator" || runtimeMode === "text_generator") {
+    const draft = buildDocumentDraft(values);
+    headline = draft.headline || generatorHeadline;
+    detail = currentLanguage === "fr"
+      ? "Un brouillon structuré a été préparé à partir des informations saisies."
+      : "A structured draft has been prepared from the provided inputs.";
+    richHtml = renderBulletList(draft.clauses, "result-list draft-list");
+    richHtml += `<pre class="result-code">${escapeHtml(draft.text)}</pre>`;
+    outputKind = "document";
+    outputCount = draft.clauses.length;
+    prepareTextDownload(resultPrimaryAction, currentLanguage === "fr" ? "Télécharger le brouillon" : "Download draft", draft.text, `${siteSlug || "draft"}.txt`);
+  } else if (runtimeMode === "seo_diagnostic") {
+    const audit = buildSeoAudit(values);
+    headline = `${audit.score}/100`;
+    detail = currentLanguage === "fr"
+      ? "Score calculé sur la structure d'URL, le title et le mot-clé principal."
+      : "Score calculated from URL structure, title, and primary keyword.";
+    richHtml = renderMetricGrid(audit.metrics);
+    richHtml += `<div class="audit-grid">${audit.checks.map((item) => `<article class="audit-card audit-${item.ok ? "pass" : "warn"}"><strong>${escapeHtml(item.label)}</strong><p>${escapeHtml(item.detail)}</p></article>`).join("")}</div>`;
+    outputKind = "audit";
+    outputCount = audit.checks.length;
+  } else if (runtimeMode === "waste_dashboard") {
+    const dashboard = buildWasteDashboard(values);
+    headline = `${dashboard.diversion}%`;
+    detail = currentLanguage === "fr"
+      ? "Taux de valorisation estimé à partir des volumes saisis."
+      : "Estimated diversion rate based on the submitted volumes.";
+    richHtml = renderMetricGrid(dashboard.metrics) + renderBulletList(dashboard.actions, "result-list actions-list");
+    outputKind = "dashboard";
+    outputCount = dashboard.metrics.length + dashboard.actions.length;
+  } else if (runtimeMode === "contrast_checker") {
+    const contrast = buildContrastAudit(values);
+    headline = `${contrast.ratio}:1`;
+    const statusText = contrast.aaa ? "AAA" : contrast.aa ? "AA" : "Fail";
+    detail = currentLanguage === "fr"
+      ? `Niveau atteint : ${statusText}`
+      : `Level reached: ${statusText}`;
+    richHtml = `<div class="contrast-preview"><div class="contrast-sample" style="background:${contrast.background};color:${contrast.foreground}">Aa</div><div class="contrast-meta"><strong>${escapeHtml(contrast.foreground)} / ${escapeHtml(contrast.background)}</strong><span>${escapeHtml(statusText)}</span></div></div>`;
+    outputKind = "contrast";
+    outputCount = 2;
+  } else if (runtimeMode === "energy_score_calculator") {
+    const electricity = Math.max(numericValue(values.electricity || values.amount || "0"), 0);
+    const gas = Math.max(numericValue(values.gas || values.duration || "0"), 0);
+    const household = Math.max(numericValue(values.household_size || values.scope || "1"), 1);
+    const total = electricity + gas;
+    const emissions = electricity * 0.055 + gas * 0.204;
+    const perPerson = total / household;
+    const score = clamp(Math.round(100 - perPerson / 42 - emissions / 24), 18, 96);
+    const grade = score >= 82 ? "A" : score >= 68 ? "B" : score >= 54 ? "C" : score >= 40 ? "D" : "E";
+    headline = `${score}/100`;
+    detail = currentLanguage === "fr"
+      ? `Classe énergétique estimée : ${grade}`
+      : `Estimated energy class: ${grade}`;
+    richHtml = renderMetricGrid([
+      { value: `${Math.round(total).toLocaleString(numberLocale)} kWh`, label: currentLanguage === "fr" ? "Consommation totale" : "Total consumption" },
+      { value: `${Math.round(emissions)} kgCO2e`, label: currentLanguage === "fr" ? "Émissions estimées" : "Estimated emissions" },
+      { value: `${Math.round(perPerson)} kWh`, label: currentLanguage === "fr" ? "Par personne" : "Per person" },
+    ]);
+    outputKind = "metrics";
+    outputCount = 3;
+  } else if (runtimeMode === "depreciation_calculator") {
+    const purchase = Math.max(numericValue(values.prix_acquisition || values.purchase_price || values.amount || "0"), 0);
+    const land = Math.max(numericValue(values.valeur_terrain || values.land_value || values.duration || "0"), 0);
+    const acquisitionYear = parseYear(values.date_acquisition || values.acquisition_year || "");
+    const base = Math.max(purchase - land, 0);
+    const annual = base / 25;
+    const yearsElapsed = clamp(new Date().getFullYear() - acquisitionYear + 1, 1, 25);
+    const cumulative = Math.min(base, annual * yearsElapsed);
+    headline = `${Math.round(annual).toLocaleString(numberLocale)} EUR`;
+    detail = currentLanguage === "fr"
+      ? "Dotation annuelle estimée en linéaire sur 25 ans."
+      : "Estimated straight-line annual depreciation over 25 years.";
+    richHtml = renderMetricGrid([
+      { value: `${Math.round(base).toLocaleString(numberLocale)} EUR`, label: currentLanguage === "fr" ? "Base amortissable" : "Depreciable base" },
+      { value: `${Math.round(cumulative).toLocaleString(numberLocale)} EUR`, label: currentLanguage === "fr" ? "Cumul potentiel" : "Potential cumulative" },
+      { value: `${yearsElapsed}`, label: currentLanguage === "fr" ? "Années couvertes" : "Years covered" },
+    ]);
+    outputKind = "metrics";
+    outputCount = 3;
+  } else if (runtimeMode === "tax_calculator") {
+    const profit = Math.max(numericValue(values.benefice_avant_impot || values.profit_before_tax || values.amount || "0"), 0);
+    const reducedEligible = /pme|reduit|reduced|oui|yes/i.test(textValue(values.regime_fiscal || values.reduced_rate || values.context || ""));
+    const reducedPart = reducedEligible ? Math.min(profit, 42500) * 0.15 : 0;
+    const standardPart = reducedEligible ? Math.max(profit - 42500, 0) * 0.25 : profit * 0.25;
+    const totalTax = reducedPart + standardPart;
+    headline = `${Math.round(totalTax).toLocaleString(numberLocale)} EUR`;
+    detail = currentLanguage === "fr"
+      ? "Projection indicative de l'impôt sur les sociétés."
+      : "Indicative corporate tax projection.";
+    richHtml = renderMetricGrid([
+      { value: `${Math.round(profit).toLocaleString(numberLocale)} EUR`, label: currentLanguage === "fr" ? "Bénéfice saisi" : "Input profit" },
+      { value: `${Math.round(reducedPart).toLocaleString(numberLocale)} EUR`, label: currentLanguage === "fr" ? "Taux réduit" : "Reduced rate" },
+      { value: `${Math.round(standardPart).toLocaleString(numberLocale)} EUR`, label: currentLanguage === "fr" ? "Taux normal" : "Standard rate" },
+    ]);
+    outputKind = "metrics";
+    outputCount = 3;
+  } else if (runtimeMode === "insurance_estimator") {
+    const age = Math.max(numericValue(values.driver_age || values.amount || "18"), 16);
+    const model = textValue(values.car_model || values.context || "");
+    const postalCode = textValue(values.postal_code || values.scope || "");
+    const sportFactor = /gti|sport|rs|gt|m3|amg/i.test(model) ? 1.28 : 1;
+    const urbanFactor = /75|92|93|94|69|13/.test(postalCode) ? 1.16 : 1;
+    const ageFactor = age < 21 ? 1.48 : age < 25 ? 1.24 : 1;
+    const premium = Math.round((58 * ageFactor * sportFactor * urbanFactor + 22) * 12) / 12;
+    headline = `${premium.toLocaleString(numberLocale)} EUR/mois`;
+    detail = currentLanguage === "fr"
+      ? "Projection mensuelle indicative pour un jeune conducteur."
+      : "Indicative monthly premium estimate for a young driver.";
+    richHtml = renderMetricGrid([
+      { value: `${age} ans`, label: currentLanguage === "fr" ? "Âge conducteur" : "Driver age" },
+      { value: model || (currentLanguage === "fr" ? "modèle standard" : "standard model"), label: currentLanguage === "fr" ? "Véhicule" : "Vehicle" },
+      { value: postalCode || "--", label: currentLanguage === "fr" ? "Zone tarifaire" : "Pricing zone" },
+    ]);
+    outputKind = "metrics";
+    outputCount = 3;
+  } else if (runtimeMode === "materials_cost_calculator") {
+    const quantity = Math.max(numericValue(values.quantity || values.scope || "0"), 0);
+    const project = textValue(values.project_type || values.primary || "");
+    const material = textValue(values.material_selection || values.context || "");
+    const materialFactor = /acier|steel/i.test(material) ? 22 : /bois|wood/i.test(material) ? 14 : /beton|concrete/i.test(material) ? 18 : 12;
+    const projectFactor = /renov|finition/i.test(project) ? 1.12 : /structure|gros/i.test(project) ? 1.28 : 1;
+    const estimated = Math.round(quantity * materialFactor * projectFactor);
+    headline = `${estimated.toLocaleString(numberLocale)} EUR`;
+    detail = currentLanguage === "fr"
+      ? "Budget matière indicatif selon volume et famille de matériaux."
+      : "Indicative material budget based on volume and material family.";
+    richHtml = renderMetricGrid([
+      { value: `${quantity.toLocaleString(numberLocale)}`, label: currentLanguage === "fr" ? "Quantité" : "Quantity" },
+      { value: material || (currentLanguage === "fr" ? "mix standard" : "standard mix"), label: currentLanguage === "fr" ? "Matériaux" : "Materials" },
+      { value: `${projectFactor.toFixed(2)}x`, label: currentLanguage === "fr" ? "Coefficient projet" : "Project factor" },
+    ]);
+    outputKind = "metrics";
+    outputCount = 3;
+  } else if (archetypeMode === "calculator") {
+    let score = 0;
+    const metrics = [];
+    fieldConfig.forEach((field) => {
+      const raw = values[field.id];
+      const multiplier = field.weight || 1;
+      if (field.type === "select") {
+        const node = document.getElementById(field.id);
+        const selected = node && node.selectedOptions.length ? Number(node.selectedOptions[0].dataset.multiplier || "1") : 1;
+        score += 100 * selected * multiplier;
+        metrics.push({ value: `${selected.toFixed(2)}x`, label: field.label });
+      } else {
+        const numeric = numericValue(raw);
+        score += numeric * multiplier;
+        metrics.push({ value: numeric.toLocaleString(numberLocale), label: field.label });
+      }
+    });
+    const rounded = Math.max(Math.round(score), 120);
+    headline = rounded.toLocaleString(numberLocale) + (resultUnit ? " " + resultUnit : "");
+    detail = calculatorDetail;
+    richHtml = renderMetricGrid(metrics.slice(0, 3));
+    outputKind = "metrics";
+    outputCount = metrics.length;
+  } else if (runtimeMode === "analysis_tool") {
+    const lines = buildResultLines(values);
+    const source = textValue(values.primary || values.context || lines.join(" ") || siteTitle);
+    const tokens = splitTokens(source.replace(/\s+/g, ","));
+    const insights = [
+      currentLanguage === "fr"
+        ? `Volume utile détecté : ${source.length} caractères.`
+        : `Useful volume detected: ${source.length} characters.`,
+      currentLanguage === "fr"
+        ? `Angle dominant : ${tokens[0] || "besoin opérationnel"}.`
+        : `Dominant angle: ${tokens[0] || "operational need"}.`,
+      currentLanguage === "fr"
+        ? `Action suivante conseillée : formaliser une décision ou un test rapide.`
+        : `Suggested next step: formalize a decision or a fast test.`,
+    ];
+    headline = toolHeadline;
+    detail = toolDetail;
+    richHtml = renderBulletList(insights, "result-list insights-list");
+    outputKind = "insights";
+    outputCount = insights.length;
+  } else {
+    const draft = buildStructuredCopy(values);
+    headline = generatorHeadline;
+    detail = generatorDetail;
+    richHtml = `<pre class="result-code">${escapeHtml(draft)}</pre>`;
+    outputKind = "document";
+    outputCount = 3;
+    prepareTextDownload(resultPrimaryAction, currentLanguage === "fr" ? "Télécharger" : "Download", draft, `${siteSlug || "output"}.txt`);
+  }
+
+  showResult(headline, detail);
+  showRichContent(outputKind, outputCount, richHtml);
+}
+
+bindActionDownloads();
+wireQrInputs();
+window.addEventListener("load", () => {
+  if (new URLSearchParams(window.location.search).get("__qa") === "functional") {
+    window.setTimeout(runFunctionalQaSmoke, 120);
+  }
+});
+
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  const QA_MESSAGES = {"missing_form": "Le formulaire principal est introuvable.", "missing_result": "La zone de resultat n'a pas renvoye de contenu exploitable.", "passed": "Le parcours fonctionnel a produit un resultat exploitable.", "default_text": "assurance auto jeune conducteur"};
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("__qa") !== "functional") return;
+  const viewport = params.get("__qa_viewport") || "desktop";
+
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  function report(status, detail, headline, primary) {
+    const node = marker();
+    if (status !== "pass" && node.getAttribute("data-status") === "pass") return;
+    node.setAttribute("data-status", status);
+    node.setAttribute("data-detail", detail || "");
+    node.setAttribute("data-headline", headline || "");
+    node.setAttribute("data-primary", primary || "");
+    node.setAttribute("data-viewport", viewport);
+  }
+
+  function fieldLabel(field) {
+    if (!field) return "";
+    if (field.id) {
+      const label = document.querySelector(`label[for="${field.id}"]`);
+      if (label) return (label.textContent || "").trim();
+    }
+    const parentLabel = field.closest("label");
+    if (parentLabel) return (parentLabel.textContent || "").trim();
+    return "";
+  }
+
+  function sampleValue(field) {
+    const haystack = [field.id, field.name, field.placeholder, field.type, fieldLabel(field)].join(" ").toLowerCase();
+    if (field.tagName === "SELECT") {
+      const options = Array.from(field.options || []).filter((item) => item.value);
+      const option = options.find((item) => item.value !== field.value) || options[0];
+      return option ? option.value : "";
+    }
+    if (field.type === "email") return "contact@example.fr";
+    if (field.type === "url" || /(url|site|web|lien|link)/.test(haystack)) return "https://exemple.fr/guide-seo";
+    if (field.type === "color" || /(couleur|color|background|foreground)/.test(haystack)) return "#1f6feb";
+    if (/(selector|selecteur|class|classe|css)/.test(haystack)) return ".qa-sample-block";
+    if (/(theme|topic|sujet|headline|title|titre|keyword|mot-cl)/.test(haystack)) return QA_MESSAGES.default_text;
+    if (/(tone|ton|style)/.test(haystack)) return "expert";
+    if (/(city|ville|geo|region)/.test(haystack)) return "Lyon";
+    if (/(company|societe|entreprise|marque)/.test(haystack)) return "Studio Horizon";
+    if (field.type === "number") {
+      const stepRaw = parseFloat(field.step || "1");
+      const minRaw = parseFloat(field.min || "");
+      const maxRaw = parseFloat(field.max || "");
+      const currentRaw = parseFloat(field.value || "");
+      const step = Number.isFinite(stepRaw) && stepRaw > 0 ? stepRaw : 1;
+      let candidate = Number.isFinite(currentRaw)
+        ? currentRaw + step
+        : (/(year|annee|duree|duration|count|nombre)/.test(haystack) ? 12 : 4800);
+      if (Number.isFinite(maxRaw) && candidate > maxRaw) {
+        candidate = Number.isFinite(currentRaw) ? currentRaw - step : maxRaw;
+      }
+      if (Number.isFinite(minRaw) && candidate < minRaw) {
+        candidate = minRaw;
+      }
+      const precision = String(field.step || "").includes(".") ? 2 : 0;
+      return precision ? String(Number(candidate.toFixed(precision))) : String(Math.round(candidate));
+    }
+    if (field.tagName === "TEXTAREA") return QA_MESSAGES.default_text + " pour Google France";
+    return QA_MESSAGES.default_text;
+  }
+
+  function setFieldValue(field, value) {
+    if (!field || field.disabled) return;
+    field.focus();
+    field.value = value;
+    field.dispatchEvent(new Event("input", { bubbles: true }));
+    field.dispatchEvent(new Event("change", { bubbles: true }));
+    field.blur();
+  }
+
+  function mainForm() {
+    return document.getElementById("tool-form") || document.querySelector("[data-tool-form]") || document.querySelector("form");
+  }
+
+  function primaryAction(form) {
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (error) {
+      // fall through to other submission strategies
+    }
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function fillForm(form) {
+    const fields = form.querySelectorAll("input, textarea, select");
+    fields.forEach((field) => {
+      if (field.type === "hidden" || field.type === "submit" || field.type === "button" || field.type === "checkbox" || field.type === "radio") return;
+      if ((field.value || "").trim()) return;
+      const value = sampleValue(field);
+      if (value) setFieldValue(field, value);
+    });
+  }
+
+  function resultPayload() {
+    const root = document.getElementById("tool-result") || document.querySelector("[data-tool-result]") || document.querySelector(".tool-result, .result-card, .result, [data-result]");
+    if (!root) return { ok: false, headline: "", detail: "" };
+    const headlineNode = document.getElementById("result-headline") || root.querySelector("h1, h2, h3, strong");
+    const detailNode = document.getElementById("result-detail") || root.querySelector("pre, code, p, li, div");
+    const codeNode = root.querySelector("pre, code");
+    const headline = (headlineNode && headlineNode.textContent || "").trim();
+    const detail = (detailNode && detailNode.textContent || root.textContent || "").replace(/\s+/g, " ").trim();
+    const code = (codeNode && codeNode.textContent || "").replace(/\s+/g, " ").trim();
+    const combined = [headline, detail].join(" ").trim();
+    const signature = [headline, detail, code].join(" ").replace(/\s+/g, " ").trim();
+    const primaryLink = root.querySelector("a[href], button[data-affiliate-slot], [data-affiliate-slot]");
+    const pending = /^(analyse|analysis|calcul|generation|g[ée]n[ée]ration|loading|processing|chargement|patientez|please wait)/i.test(combined);
+    return {
+      ok: ((combined.length >= 24) || (code.length >= 24)) && !pending,
+      pending,
+      combined,
+      signature,
+      headline: headline || combined.slice(0, 96),
+      detail: code || detail || combined,
+      primary: primaryLink && primaryLink.getAttribute("href") || "",
+    };
+  }
+
+  function run() {
+    try {
+      const form = mainForm();
+      if (!form) {
+        report("fail", QA_MESSAGES.missing_form, "", "");
+        return;
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+      }, true);
+      const baseline = resultPayload();
+      fillForm(form);
+      const action = primaryAction(form);
+      triggerAction(form, action);
+      const startedAt = Date.now();
+      const deadline = startedAt + (viewport === "mobile" ? 5200 : 4200);
+      let retried = false;
+      function verifyResult() {
+        const result = resultPayload();
+        const changed = Boolean(
+          (result.signature || result.combined || "") &&
+          ((result.signature || result.combined || "") !== (baseline.signature || baseline.combined || "") || baseline.pending)
+        );
+        if (result.ok && changed) {
+          report("pass", QA_MESSAGES.passed, result.headline, result.primary);
+          return;
+        }
+        if (!retried && Date.now() - startedAt >= 900) {
+          retried = true;
+          triggerAction(form, action);
+        }
+        if (Date.now() >= deadline) {
+          report("fail", QA_MESSAGES.missing_result, result.headline, result.primary);
+          return;
+        }
+        window.setTimeout(verifyResult, 280);
+      }
+      window.setTimeout(verifyResult, viewport === "mobile" ? 1200 : 900);
+    } catch (error) {
+      report("fail", error && error.message ? error.message : "Functional QA failed.", "", "");
+    }
+  }
+
+  function scheduleRun() {
+    window.setTimeout(run, 220);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", scheduleRun, { once: true });
+  } else {
+    scheduleRun();
+  }
+})();
+</script>
+</body>
+</html>
